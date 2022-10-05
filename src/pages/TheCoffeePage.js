@@ -1,18 +1,22 @@
 import { Container, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import ClassCard from '../features/coffeeclasses/ClassCard';
+// import ClassCard from '../features/coffeeclasses/ClassCard';
+// import CoffeeCard from '../features/coffeemap/CoffeeCard';
 
 const TheCoffeePage = () => {
     return (
         <Container>
             <Row>
                 <Col>
-                    <ClassCard />
+                
+                    some coffee things
                 </Col>
                 <Col>
-                    <CoffeeCard />
+                
+                    more coffee things
                 </Col>
             </Row>
         </Container>
     )
-}
+};
+
+export default TheCoffeePage;

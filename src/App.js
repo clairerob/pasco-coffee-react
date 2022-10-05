@@ -1,22 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ContactPage from './pages/ContactPage';
 import './App.css';
-import Header from './components/Header';
+import Header from './components/Header';   
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
+import AboutPage from './pages/AboutPage';
 import TheCoffeePage from './pages/TheCoffeePage';
+import CoffeeMapPage from './pages/CoffeeMapPage';
+import CoffeeClassesPage from './pages/CoffeeClassesPage';
+import OrderPage from './pages/OrderPage';
 
 const App = () => {
     return (
         <div>
+            Hello does this work at all
             <Header />
             <Routes >
                 <Route path='/' element={<HomePage/>} />
                 <Route path='/menu' element={<MenuPage/>} />
                 <Route path='/about' element={<AboutPage/>} />
-                <Route path='/coffee' element={<CoffeePage/>} />
-                <Route path='/coffee-map' element={<CoffeeMap/>} />
-                <Route path='/coffee-classes' element={<CoffeeClasses />} />
-                <Route path='/contact' element={<ContactPage/>} />
+                <Route path='/coffee' element={<TheCoffeePage/>} />
+                <Route path='/coffee-map' element={<CoffeeMapPage/>} />
+                <Route path='/coffee-classes' element={<CoffeeClassesPage/>} />
                 <Route path='/order' element={<OrderPage />} />
             </Routes>
             <Footer />
