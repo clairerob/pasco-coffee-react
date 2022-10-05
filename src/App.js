@@ -1,58 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
 import './App.css';
+import Header from './components/Header';
+import TheCoffeePage from './pages/TheCoffeePage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <Header />
+            <Routes >
+                <Route path='/' element={<HomePage/>} />
+                <Route path='/menu' element={<MenuPage/>} />
+                <Route path='/about' element={<AboutPage/>} />
+                <Route path='/coffee' element={<CoffeePage/>} />
+                <Route path='/coffee-map' element={<CoffeeMap/>} />
+                <Route path='/coffee-classes' element={<CoffeeClasses />} />
+                <Route path='/contact' element={<ContactPage/>} />
+                <Route path='/order' element={<OrderPage />} />
+            </Routes>
+            <Footer />
+        </div>
+    )
+};
 
 export default App;
