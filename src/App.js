@@ -13,7 +13,6 @@ import OrderPage from './pages/OrderPage';
 const App = () => {
     return (
         <div>
-            Hello does this work at all
             <Header />
             <Routes >
                 <Route path='/' element={<HomePage/>} />

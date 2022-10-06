@@ -23,6 +23,9 @@ const Footer = () => {
                                 <Link to='/about'>about</Link>
                             </li>
                             <li>
+                                <Link to='/coffee'>coffee</Link>
+                            </li>
+                            <li>
                                 <Link to='/coffee-map'>the coffee map</Link>
                             </li>
                             <li>

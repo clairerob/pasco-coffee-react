@@ -1,7 +1,7 @@
-import { Card, CardImg, CardImgOverlay, CardTitle, CardText, CardBody } from 'reactstrap';
+// import { Card, CardImg, CardImgOverlay, CardTitle, CardText, CardBody } from 'reactstrap';
 
 const ClassCard = ({ workshop }) => {
-    const { image, name, description, date } = workshop;
+    // const { image, name, description, date } = workshop;
     return (
         // link to booking class
         // <Card>
@@ -15,7 +15,10 @@ const ClassCard = ({ workshop }) => {
         //     <h1>classname</h1>
         //     <p>words about class</p>
         // </Card>
-        <div>does it work now</div>
+        <div>
+        <h1>ClassName</h1>
+        <p>words about the fun class</p>
+    </div>
     )
 };
 
