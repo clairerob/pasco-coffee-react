@@ -47,7 +47,7 @@ const COFFEES = [
     {
         name: 'Decaf Sugarcane EA Huila',
         roastery: 'Oddly Correct',
-        country: Colombia,
+        country: 'Colombia',
         description: 'rotating cast of coffees; light, sweet, crisp',
         v60: 3.50,
         bag: 16.00,

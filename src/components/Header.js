@@ -21,7 +21,7 @@ const Header = () => {
 			<Navbar sticky='top' expand='sm' light className='mx-md-3 mx-lg-5'>
 				<NavbarBrand href='/'>
 					<img src={logo} alt='pasco coffee logo' width='100px' height='100px'/>
-					<h1>Pasco Coffee Bar</h1>
+					<h1>Pasco Coffee</h1>
 				</NavbarBrand>
 
 				<NavbarToggler className='navbar-toggler-icon' onClick={() => setMenuOpen(!menuOpen)} />
