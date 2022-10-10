@@ -1,4 +1,7 @@
-//import image files here
+import drink from '../assets/drink.jpg';
+import latte from '../assets/latte-art.jpg';
+import lattepour from '../assets/latte-pour.jpg';
+import v60 from '../assets/v60-pour.jpg';
 
 const MENU_ITEMS = [
     {
@@ -6,7 +9,7 @@ const MENU_ITEMS = [
         description: 'Brewed for 18 hours with Oddly\'s signature cold brew blend of 50/50 Guatemala/Ethiopia Natural. Full-bodied, fruity, cocoa,, blackberry, jammy',
         price: 4.00,
         size: '16oz',
-        image: 'this?',
+        image: {drink},
         featured: true,
         current: true,
     },
@@ -15,7 +18,7 @@ const MENU_ITEMS = [
         description: 'A smooth blend of cold-brewed espresso concentrate + milk',
         price: 5.00,
         size: '16oz',
-        image: 'this?',
+        image: {latte},
         featured: false,
         current: true,
     },
@@ -24,7 +27,7 @@ const MENU_ITEMS = [
         description: 'Cold-brewed espresso concentrate + house-made vanilla turbinado cane syrup + milk',
         price: 5.50,
         size: '16oz',
-        image: 'this?',
+        image: {lattepour},
         featured: false,
         current: true,
     },
@@ -33,7 +36,7 @@ const MENU_ITEMS = [
         description: 'Cold-brewed espresso concentrate + wildflower honey infused with organic lavender buds + milk + pink himalayan salt',
         price: 5.70,
         size: '16oz',
-        image: 'this?',
+        image: {v60},
         featured: true,
         current: true,
     },
@@ -43,7 +46,7 @@ const MENU_ITEMS = [
         price: 4.50,
         size: '16oz',
         image: 'this?',
-        featured: false,
+        featured: true,
         current: true,
     },
     {
