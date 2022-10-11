@@ -56,11 +56,17 @@ const COFFEES = [
     },
 ];
 
-export const getAllCoffees = () => {
-    return COFFEES;
-};
-
 export const getCurrentCoffees = () => {
     return COFFEES.filter(coffee => coffee.current);
 };
 
+export const getCurrentCoffeeCountries = () => {
+    return COFFEES.reduce((all, cur) => {
+        if (cur.current) return [...all, cur.country];
+        return all;
+    }, [])
+};
+
+export const getCurrentCoffeesByCountry = (countryName) => {
+    return COFFEES.filter(coffee => coffee.current && coffee.country === countryName);
+};

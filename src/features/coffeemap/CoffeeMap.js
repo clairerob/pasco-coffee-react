@@ -5,16 +5,18 @@ import {
 	Marker,
 } from 'react-simple-maps';
 import { memo } from 'react';
+import mymap from '../../app/assets/mymap.json';
+import { getCurrentCoffeeCountries, getCurrentCoffeesByCountry } from '../../app/shared/COFFEES';
 
+const geoUrl = mymap;
+// 'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
 
-const geoUrl =
-	'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
+const highlightedCountries = getCurrentCoffeeCountries();
 
-const CoffeeMap = ({setTooltipContent}) => {
-
+const CoffeeMap = ({ setTooltipContent }) => {
 	return (
 		<div data-tip=''>
-			<ComposableMap projectionConfig={{ scale: 240, center: [3, 0] }}>
+			<ComposableMap projectionConfig={{ scale: 220, center: [23, 0] }}>
 				<Geographies geography={geoUrl}>
 					{({ geographies, borders, outline }) =>
 						geographies.map((geo) => (
@@ -22,18 +24,34 @@ const CoffeeMap = ({setTooltipContent}) => {
 								key={geo.rsmKey}
 								geography={geo}
 								style={{
-									default: { fill: '#38a', stroke: '#ae1' },
-									hover: { fill: '#a33', stroke: '#ae1', strokeWidth: 2.5 },
-									pressed: { fill: '#c3c', stroke: '#ae1', strokeWidth: 2.5 },
+									default: { fill: '#38a', stroke: '#38a', outline: 'none' },
+									hover: {
+										fill: '#a33',
+										stroke: '#ae1',
+										strokeWidth: 2,
+										outline: 'none',
+									},
+									pressed: {
+										fill: '#c3c',
+										stroke: '#ae1',
+										strokeWidth: 2.5,
+										outline: 'none',
+									},
 								}}
-                                onMouseEnter={() => {
-                                    setTooltipContent('anything'
-                                        // `${geo.properties.name}`
-                                        );
-                                  }}
-                                  onMouseLeave={() => {
-                                    setTooltipContent("");
-                                  }}
+								onMouseEnter={() => {
+									const coffeeFromHere = getCurrentCoffeesByCountry(
+										geo.properties.SOVEREIGNT
+									);
+									console.log(coffeeFromHere[0].name);
+									setTooltipContent(
+										`${coffeeFromHere[0].country} \n
+										${coffeeFromHere[0].name} \n
+										${coffeeFromHere[0].description}`
+									);
+								}}
+								onMouseLeave={() => {
+									setTooltipContent('');
+								}}
 							/>
 						))
 					}

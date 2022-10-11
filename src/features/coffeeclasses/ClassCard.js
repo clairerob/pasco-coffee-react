@@ -24,7 +24,7 @@ const ClassCard = ({ workshop }) => {
 				<Col>
 					<img className='ml-3 img-fluid' alt='barista' src={latte} />
 				</Col>
-				<Col sm='6' lg='4' className='align-self-center'>
+				<Col sm='6' lg='4' className='align-self-center order-sm-first'>
 					<h1>classes</h1>
 					<p>
 						join us for cupping sessions, home brewing and espresso classes{' '}
