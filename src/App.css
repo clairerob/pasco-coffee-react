@@ -17,6 +17,9 @@
 	text-decoration: none;
 	color: #eee;
 }
+.order-banner :hover {
+	color: #fad65e;
+}
 
 nav {
 	background-color: #fff;
