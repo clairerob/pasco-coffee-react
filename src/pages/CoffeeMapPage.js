@@ -1,43 +1,39 @@
-import {
-	ComposableMap,
-	Geographies,
-	Geography,
-	Marker,
-} from 'react-simple-maps';
 
-const geoUrl =
-	'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
+import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+import { Tooltip } from 'react-bootstrap';
+import { useState } from 'react';
+import CoffeeMap from '../features/coffeemap/CoffeeMap';
+
 
 const CoffeeMapPage = () => {
+    
+const [popoverOpen, setPopoverOpen] = useState(false);
+const toggle = () => setPopoverOpen(!popoverOpen);
+
+const [tooltipContent, setTooltipContent] = useState('');
+
 	return (
 		<div>
-			<h1>CoffeeMapPAGE</h1>
-			<ComposableMap projectionConfig={{ scale: 240, center: [3, 0] }}>
-				<Geographies geography={geoUrl}>
-					{({ geographies, borders, outline }) =>
-						geographies.map((geo) => (
-							<Geography
-								key={geo.rsmKey}
-								geography={geo}
-								style={{
-									default: { fill: '#38a', stroke: '#ae1' },
-									hover: { fill: '#a33', stroke: '#ae1', strokeWidth: 2.5 },
-									pressed: { fill: '#c3c', stroke: '#ae1', strokeWidth: 2.5 },
-								}}
-							/>
-						))
-					}
-				</Geographies>
-				<Marker coordinates={[-74.006, 40.7128]}>
-					<p>HERE I AM</p>
-				</Marker>
+			<button id='testing' onClick={toggle}>
+				CoffeeMapPAGE
+			</button>
 
-				<Marker coordinates={[-102, 38]} fill='#777'>
-					<text textAnchor='middle' fill='#F53'>
-						USA
-					</text>
-				</Marker>
-			</ComposableMap>
+			<Popover
+				placement='right'
+				isOpen={popoverOpen}
+				target='testing'
+				toggle={toggle}
+			>
+				<PopoverHeader>Coffee Test</PopoverHeader>
+				<PopoverBody>
+					Facts and flavors about whatever the coffee happens to be and taste
+					like and maybe more details, do I want a link to order it or no?
+				</PopoverBody>
+			</Popover>
+
+            <CoffeeMap  setTooltipContent={setTooltipContent}/>
+            <Tooltip>{tooltipContent}</Tooltip>
+			
 		</div>
 	);
 };
