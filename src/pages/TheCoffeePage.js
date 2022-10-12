@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'reactstrap';
-import ClassCard from '../features/coffeeclasses/ClassCard';
-import CoffeeCard from '../features/coffeemap/CoffeeCard';
+import ClassInfo from '../features/coffeeclasses/ClassInfo';
+import CoffeeInfo from '../features/coffeemap/CoffeeInfo';
 
 const TheCoffeePage = () => {
     return (
@@ -10,10 +10,10 @@ const TheCoffeePage = () => {
             </Row>
             <Row>
                 <Col>
-                    <ClassCard />
+                    <ClassInfo />
                 </Col>
                 <Col>
-                    <CoffeeCard />
+                    <CoffeeInfo />
                 </Col>
             </Row>
         </Container>

@@ -1,6 +1,5 @@
 import { Row, Col } from 'reactstrap';
 import { getFeaturedMenuItems } from '../../app/shared/MENU_ITEMS';
-import drink from '../../app/assets/drink.jpg';
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -20,7 +19,7 @@ const MenuCarousel = () => {
 				{items.map((item) => { 
 				 	return (
 					<Carousel.Item>
-						<img className='d-block w-100' src={drink} alt={item.drink} />
+						<img className='d-block w-100' src={item.image} alt={item.drink} />
 						<Carousel.Caption>
 							<h3>{item.drink}</h3>
 							<p className='d-none d-lg-block'>{item.description}</p>

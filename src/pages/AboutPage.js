@@ -8,7 +8,7 @@ const AboutPage = () => {
 			<Container>
 				<Row>
 					<Col sm='6'>
-						<img src={owner} className='img-fluid' alt='photo-of-owner' />
+						<img src={owner} className='img-fluid' alt='owner' />
 					</Col>
 					<Col>
 						words that willie will give me... Lorem ipsum dolor sit amet,
@@ -24,6 +24,8 @@ const AboutPage = () => {
 				<Row>
 					<Col>
 						<Button>learn more about coffee</Button>
+						</Col>
+						<Col>
 						<Button>see the menu</Button>
 					</Col>
 				</Row>

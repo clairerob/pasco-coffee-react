@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<footer className='site-footer'>
 			<Container>
-				<Row>
+				<Row className='pb-3'>
 					<Col className=' d-none d-md-block'>
 						<ul className='list-unstyled'>
 							<li>
@@ -45,6 +45,7 @@ const Footer = () => {
 					</Col>
 					<Col>
 						<h5>location</h5>
+						<a href='https://goo.gl/maps/BXTJCXGxS4BWQzn58'>
 						<p>
 							107 s broad street unit b
 							<br />
@@ -56,6 +57,7 @@ const Footer = () => {
 							<br />
 							(at rear of relish)
 						</p>
+						</a>
 						<h5>hours</h5>
 						<p>
 							tues-fri : 7:30am - 3pm

@@ -1,14 +1,16 @@
 const COFFEES = [
     {
+        id: 0,
         name: 'GOOD GIRL: signature blend',
         roastery: 'Oddly Correct',
-        country: 'blend',
-        description: 'rotating cast of coffees; light, sweet, crisp',
+        country: 'United States of America',
+        description: 'house blend: a rotating cast of coffees; light, sweet, crisp',
         v60: 3.50,
         bag: 16.00,
         current: true,
     },
     {
+        id: 1,
         name: 'David Rodriguez',
         roastery: 'Oddly Correct',
         country: 'Colombia',
@@ -18,6 +20,7 @@ const COFFEES = [
         current: true,
     },
     {
+        id: 2,
         name: 'Sumatra Pantan Musara',
         roastery: 'Oddly Correct',
         country: 'Indonesia',
@@ -27,6 +30,7 @@ const COFFEES = [
         current: true,
     },
     {
+        id: 3,
         name: 'Natural Dukamo',
         roastery: 'Oddly Correct',
         country: 'Ethiopia',
@@ -36,6 +40,7 @@ const COFFEES = [
         current: true,
     },
     {
+        id: 4,
         name: 'Fazenda Sertao',
         roastery: 'Oddly Correct',
         country: 'Brazil',
@@ -45,10 +50,11 @@ const COFFEES = [
         current: true,
     },
     {
+        id: 5,
         name: 'Decaf Sugarcane EA Huila',
         roastery: 'Oddly Correct',
         country: 'Colombia',
-        description: 'rotating cast of coffees; light, sweet, crisp',
+        description: 'delious decaf',
         v60: 3.50,
         bag: 16.00,
         decaf: true,
@@ -61,9 +67,9 @@ export const getCurrentCoffees = () => {
 };
 
 export const getCurrentCoffeeCountries = () => {
-    return COFFEES.reduce((all, cur) => {
-        if (cur.current) return [...all, cur.country];
-        return all;
+    return COFFEES.reduce((acc, cur) => {
+        if (cur.current) return [...acc, cur.country];
+        return acc;
     }, [])
 };
 

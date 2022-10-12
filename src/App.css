@@ -8,6 +8,9 @@
 .site-footer i {
 	color: #eee;
 }
+.btn-social-icon {
+	margin: 0.5rem;
+}
 
 .order-banner {
 	background-color: rgb(2, 20, 24);
