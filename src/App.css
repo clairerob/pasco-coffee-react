@@ -1,3 +1,4 @@
+
 .site-footer a {
 	color: #fad65e;
 	text-decoration: none;
@@ -15,8 +16,8 @@
 .order-banner {
 	background-color: rgb(2, 20, 24);
 	text-align: center;
-	padding: 0.2rem;
-	height: 2rem;
+	padding: 0.5rem;
+	height: 2.5rem;
 	text-decoration: none;
 	color: #eee;
 }
@@ -25,15 +26,18 @@
 }
 
 nav {
-	background-color: #fff;
+	max-width: 900px;
 }
-nav a, .navbar-nav a, #overlay a {
+#overlay a {
 	color: rgb(3, 61, 74);
 }
-nav a:hover,
-.navbar-nav a:hover, 
-#overlay a:hover {
+#overlay a:hover, .brand-name:hover {
 	color: #d8a600;
+}
+
+.header {
+	background-color: rgba(255, 255, 255, 0.25);
+	height: 8rem;
 }
 
 .navbar-nav {
@@ -69,3 +73,55 @@ footer {
 	background-color: rgb(3, 61, 74);
 	color: #eee;
 }
+
+.coffee-map-info {
+	margin: 1.2rem auto;
+	width: 50%;
+}
+
+.app {
+	background-image:     linear-gradient(
+		rgba(255, 255, 255, 0.5), 
+		rgba(255, 255, 255, 0.5)
+	  ), url(./app/assets/dddraw.svg);
+	margin: 0;
+	padding: 0;
+}
+
+
+/* may change with real imgs */
+.carousel .carousel-item {
+	height: 500px;
+  }
+  
+.carousel .carousel-item img {
+	  position: absolute;
+	  object-fit:cover;
+	  top: 0;
+	  left: 0;
+	  min-height: 500px;
+  }
+
+  .mapPage {
+	background-color: #fdfdfd;
+	padding: 5px;
+  }
+
+  .menupage-hr {
+	width: 80%;
+  }
+
+  .aboutpage-img {
+	border-radius: 8px;
+	max-height: 600px;
+  }
+
+  .aboutpage-btn {
+	width: 100%;
+	height: 3rem;
+	background-color: #d8a600;
+  }
+
+  .aboutpage-container {
+	color: rgb(3, 61, 74);
+  }

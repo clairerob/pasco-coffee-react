@@ -1,15 +1,11 @@
-import {
-	ComposableMap,
-	Geographies,
-	Geography,
-} from 'react-simple-maps';
+import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import { memo } from 'react';
 import mymap from '../../app/assets/mymap.json';
 import { getCurrentCoffeesByCountry } from '../../app/shared/COFFEES';
 import CoffeeTooltip from './CoffeeTooltip';
 
-const geoUrl = mymap;
-// 'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
+const geoUrl = 
+mymap;
 
 const worldStyles = {
 	default: {
@@ -30,26 +26,25 @@ const worldStyles = {
 };
 
 const coffeeCountryStyles = {
-	default:
-			{
-					fill: '#d55',
-					stroke: '#d55',
-					outline: 'none',
-			  },
-		
-		hover: {
-			fill: '#b33',
-			stroke: '#b33',
-			strokeWidth: 2,
-			outline: 'none',
-		},
-		pressed: {
-			fill: '#b33',
-			stroke: '#b33',
-			strokeWidth: 2,
-			outline: 'none',
-		},
-	};
+	default: {
+		fill: '#d55',
+		stroke: '#d55',
+		outline: 'none',
+	},
+
+	hover: {
+		fill: '#b33',
+		stroke: '#b33',
+		strokeWidth: 3,
+		outline: 'none',
+	},
+	pressed: {
+		fill: '#b33',
+		stroke: '#b33',
+		strokeWidth: 3,
+		outline: 'none',
+	},
+};
 
 const CoffeeMap = ({ setTooltipContent }) => {
 	return (
@@ -61,17 +56,19 @@ const CoffeeMap = ({ setTooltipContent }) => {
 							<Geography
 								key={geo.rsmKey}
 								geography={geo}
-								style={getCurrentCoffeesByCountry(geo.properties.SOVEREIGNT)
-										.length
+								style={
+									getCurrentCoffeesByCountry(geo.properties.name).length
 										? coffeeCountryStyles
 										: worldStyles
-									}
+								}
 								onMouseEnter={() => {
 									const coffeeFromHere = getCurrentCoffeesByCountry(
-										geo.properties.SOVEREIGNT
+										geo.properties.name
 									);
 									setTooltipContent(
-										coffeeFromHere.length > 0 && <CoffeeTooltip coffeeFromHere={coffeeFromHere}/>
+										coffeeFromHere.length > 0 && (
+											<CoffeeTooltip coffeeFromHere={coffeeFromHere} />
+										)
 									);
 								}}
 								onMouseLeave={() => {

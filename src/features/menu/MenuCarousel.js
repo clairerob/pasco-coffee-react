@@ -18,7 +18,7 @@ const MenuCarousel = () => {
 				<Carousel activeIndex={index} onSelect={handleSelect}>
 				{items.map((item) => { 
 				 	return (
-					<Carousel.Item>
+					<Carousel.Item key={item.id}>
 						<img className='d-block w-100' src={item.image} alt={item.drink} />
 						<Carousel.Caption>
 							<h3>{item.drink}</h3>

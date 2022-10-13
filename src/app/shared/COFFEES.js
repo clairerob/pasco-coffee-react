@@ -1,10 +1,10 @@
 const COFFEES = [
     {
         id: 0,
-        name: 'GOOD GIRL: signature blend',
+        name: 'Good Girl: signature blend',
         roastery: 'Oddly Correct',
         country: 'United States of America',
-        description: 'house blend: a rotating cast of coffees; light, sweet, crisp',
+        description: 'Oddly Correct house blend: a rotating cast of coffees; light, sweet, crisp',
         v60: 3.50,
         bag: 16.00,
         current: true,
@@ -54,7 +54,7 @@ const COFFEES = [
         name: 'Decaf Sugarcane EA Huila',
         roastery: 'Oddly Correct',
         country: 'Colombia',
-        description: 'delious decaf',
+        description: 'delicious decaf',
         v60: 3.50,
         bag: 16.00,
         decaf: true,

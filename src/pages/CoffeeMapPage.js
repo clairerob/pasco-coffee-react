@@ -5,43 +5,46 @@ import CoffeeMap from '../features/coffeemap/CoffeeMap';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const CoffeeMapPage = () => {
-	// const [popoverOpen, setPopoverOpen] = useState(false);
-	// const toggle = () => setPopoverOpen(!popoverOpen);
-
 	const [tooltipContent, setTooltipContent] = useState('');
 
 	return (
 		<div className='mapPage'>
-			{/* <button id='testing' onClick={toggle}>
-				CoffeeMapPAGE
-			</button>
-
-			<Popover
-				placement='right'
-				isOpen={popoverOpen}
-				target='testing'
-				toggle={toggle}
-			>
-				<PopoverHeader>Coffee Test</PopoverHeader>
-				<PopoverBody>
-					Facts and flavors about whatever the coffee happens to be and taste
-					like and maybe more details, do I want a link to order it or no?
-				</PopoverBody>
-			</Popover> */}
-
-			<h1>CoffeeMapPage</h1>
+			<h1 className='text-center m-5'>single-origin coffee map</h1>
 
 			<Container>
-				<Row >
-					<Col lg='3' className='order-lg-last m-5'>Some text about the map and the countries and the coffees, learning things is fun and tasting things is good</Col>
-					<Col>
+				<Row>
+					<Col lg='3' className='order-lg-last m-md-4 px-5 px-lg-3'>
+						<p>
+							the great variety in coffee we serve comes partly from the
+							preparation, partly from the roast, and in huge part from the
+							growing process.
+							<hr className='coffee-map-info' />
+							location and varietal are hugely important to the final cup, as
+							well as the care taken in growing and processing those beans - we
+							serve our single origin brewed coffees to highlight the distinct
+							elements of each one.
+							<hr className='coffee-map-info' />
+							we work with roasteries that take care to select the very best,
+							specialty-grade coffees, and have created this interactive map to
+							allow you to explore the different tasting notes and styles of
+							coffee each region cultivates.
+							<hr className='coffee-map-info' />
+							you'll notice, for example, that kenya often produces very
+							fruit-forward coffees, or that brazil tends towards chocolatey,
+							nutty notes. this can be a great way to help you find something
+							you might like - but there's always something new, and you might
+							be surprised at what you love next!
+						</p>
+					</Col>
+					<Col className='mt-lg-5'>
 						<CoffeeMap setTooltipContent={setTooltipContent} />
 						<ReactTooltip
 							multiline
 							clickable
-							textColor='gold'
-							backgroundColor='#248637'
+							textColor='#b33f'
+							backgroundColor='#FDBE59'
 							arrowColor='rgb(1,1,1,0)'
+							className='tooltip'
 						>
 							{tooltipContent}
 						</ReactTooltip>

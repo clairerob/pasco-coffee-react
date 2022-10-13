@@ -1,32 +1,43 @@
 import owner from '../app/assets/owner.jpg';
 import { Container, Row, Col, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
 	return (
 		<div>
-			<h1>AboutPAGE</h1>
-			<Container>
+			<Container className='pt-5 aboutpage-container'>
 				<Row>
-					<Col sm='6'>
-						<img src={owner} className='img-fluid' alt='owner' />
-					</Col>
-					<Col>
-						words that willie will give me... Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-						esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum
+					<Col className='text-center'>
+						<h1>about us</h1>
 					</Col>
 				</Row>
-				<Row>
-					<Col>
-						<Button>learn more about coffee</Button>
-						</Col>
-						<Col>
-						<Button>see the menu</Button>
+				<Row className='py-5 gx-5 gy-4 align-items-center'>
+					<Col sm='6'>
+						<img src={owner} className='img-fluid aboutpage-img' alt='owner' />
+					</Col>
+					<Col className='aboutpage-text'>
+						<p>
+							words that willie will give me... Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate
+							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+							occaecat cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum
+						</p>
+					</Col>
+				</Row>
+				<Row className='justify-content-center'>
+					<Col xs='8' md='4' className='py-3'>
+						<Link to='/coffee'>
+							<Button className='aboutpage-btn'>learn more about coffee</Button>
+						</Link>
+					</Col>
+					<Col xs='8' md='4' className='py-3'>
+						<Link to='/menu'>
+							<Button className='aboutpage-btn'>see the menu</Button>
+						</Link>
 					</Col>
 				</Row>
 			</Container>

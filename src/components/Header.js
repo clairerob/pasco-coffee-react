@@ -6,19 +6,16 @@ import {
 	NavbarToggler,
 	Nav,
 	NavItem,
-	Dropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
 } from 'reactstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../app/assets/pasco-logo.png';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	// const [dropdownOpen, setDropdownOpen] = useState(false);
 
 	return (
-		<div>
+		<div className='header'>
 			<div className='order-banner'>
 				<Link className='order-banner' to='/order'>
 					ORDER ONLINE
@@ -26,13 +23,13 @@ const Header = () => {
 			</div>
 			<Navbar sticky='top' expand='sm' light className='mx-md-3 mx-lg-5'>
 				<NavbarBrand href='/'>
-					<img
+					{/* <img
 						src={logo}
 						alt='pasco coffee logo'
 						width='100px'
 						height='100px'
-					/>
-					<h1>Pasco Coffee</h1>
+					/> */}
+					<h1 className='brand-name'>Pasco Coffee</h1>
 				</NavbarBrand>
 
 				<NavbarToggler
@@ -56,6 +53,19 @@ const Header = () => {
 								about
 							</NavLink>
 						</NavItem>
+						{/* <NavItem>
+							<Dropdown onClick={() => setDropdownOpen(!dropdownOpen)}>
+								<DropdownToggle>the coffee</DropdownToggle>
+								<DropdownMenu>
+									<NavLink to='/coffee-classes'>
+										<DropdownItem>Link</DropdownItem>
+									</NavLink>
+									<NavLink to='/coffee-map'>
+										<DropdownItem>coffee</DropdownItem>
+									</NavLink>
+								</DropdownMenu>
+							</Dropdown>
+						</NavItem> */}
 						<NavItem>
 							<NavLink className='nav-link' to='/coffee'>
 								the coffee

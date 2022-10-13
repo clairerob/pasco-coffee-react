@@ -5,7 +5,7 @@ const CoffeeTooltip = ({ coffeeFromHere }) => {
 			{coffeeFromHere.map((coffee) => (
 				<>
 					<h3>{coffee.country}</h3>
-					<h4>{coffee.name}</h4>
+					<h5>{coffee.name}</h5>
 					<p>{coffee.description}</p>
 				</>
 			))}
