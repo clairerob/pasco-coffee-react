@@ -1,47 +1,81 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { Button, FormGroup, Label } from 'reactstrap';
-import {validateContactForm} from './validateContactForm';
-
+import { Button, FormGroup, Label, Col } from 'reactstrap';
+import { validateContactForm } from '../utils/validateContactForm';
 
 const ContactForm = () => {
-    const handleSubmit = (values, {resetForm}) => {
-        console.log('form values in JSON:', JSON.stringify(values));
-        resetForm();
-    }
+	const handleSubmit = (values, { resetForm }) => {
+		console.log('form values in JSON:', JSON.stringify(values));
+		resetForm();
+	};
 	return (
 		<>
-			<p>this is a form soon</p>
 			<Formik
 				initialValues={{
 					name: '',
 					email: '',
-                    agree: false,
+					agree: false,
 					comment: '',
 				}}
-                onSubmit={handleSubmit}
-                validate={validateContactForm}
+				onSubmit={handleSubmit}
+				validate={validateContactForm}
 			>
 				<Form>
-                    <FormGroup>
-					<Label htmlFor='name'>name</Label>
-					<Field name='name' placeholder='name' className='form-control'></Field>
-					<ErrorMessage name='name'>{(msg) => <p>{msg}</p>}</ErrorMessage>
-                    </FormGroup>
-                    <FormGroup>
-					<Label htmlFor='email'>email</Label>
-					<Field name='email' placeholder='email' type='email' className='form-control'></Field>
-					<ErrorMessage name='email'>oops</ErrorMessage>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label check htmlFor='agree'>may we contact you?</Label>
-                        <Field name='agree' type='checkbox' className='form-check-input' />
-                    </FormGroup>
-                    <FormGroup>
-					<Label htmlFor='comment'>what do you want to ask/tell us?</Label>
-					<Field name='comment' as='textarea' rows='4' className='form-control'></Field>
-					<ErrorMessage name='comment'>oops</ErrorMessage>
-                    </FormGroup>
+					<FormGroup row className='justify-content-center'>
+						<Col xs='10' md='12' lg='10' xl='8'>
+							<Label htmlFor='name'>name</Label>
+							<Field
+								name='name'
+								placeholder='name'
+								className='form-control'
+							></Field>
+							<ErrorMessage name='name'>
+								{(msg) => <p className='text-danger'>{msg}</p>}
+							</ErrorMessage>
+						</Col>
+					</FormGroup>
+					<FormGroup row className='justify-content-center'>
+						<Col xs='10' md='12' lg='10' xl='8'>
+							<Label htmlFor='email'>email</Label>
+							<Field
+								name='email'
+								placeholder='email'
+								type='email'
+								className='form-control'
+							></Field>
+							<ErrorMessage name='email'>
+								{(msg) => <p className='text-danger'>{msg}</p>}
+							</ErrorMessage>
+						</Col>
+					</FormGroup>
+					<FormGroup row className='justify-content-center'>
+						<Col >
+							<Label check xs={{offset:1}} md={{offset:0}} lg={{offset:1}} xl={{offset:2}}>
+							<Field
+								name='agree'
+								type='checkbox'
+								className='form-check-input text-info'
+							/>
+							{' '}may we contact you?
+							</Label>
+						</Col>
+					</FormGroup>
+					<FormGroup row className='justify-content-center'>
+						<Col xs='10' md='12' lg='10' xl='8'>
+							<Label htmlFor='comment'>what do you want to ask/tell us?</Label>
+							<Field
+								name='comment'
+								as='textarea'
+								rows='4'
+								className='form-control'
+							></Field>
+							<ErrorMessage name='comment'>
+								{(msg) => <p className='text-danger'>{msg}</p>}
+							</ErrorMessage>
+						</Col>
+					</FormGroup>
+					<Col xs={{offset: 5}}>
 					<Button type='submit'>submit</Button>
+					</Col>
 				</Form>
 			</Formik>
 		</>

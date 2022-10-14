@@ -46,8 +46,9 @@ const Footer = () => {
 					</Col>
 					<Col>
 						<h5>location</h5>
-						<a href='https://goo.gl/maps/BXTJCXGxS4BWQzn58'>
+					
 						<p>
+						<a href='https://goo.gl/maps/BXTJCXGxS4BWQzn58'>
 							107 s broad street unit b
 							<br />
 							thomasville
@@ -57,16 +58,14 @@ const Footer = () => {
 							31792
 							<br />
 							(at rear of relish)
-						</p>
 						</a>
+						</p>
 						<h5>hours</h5>
 						<p>
 							tues-fri : 7:30am - 3pm
 							<br />
 							sat : 9am - 5pm
 						</p>
-					</Col>
-					<Col>
 						<div className='d-md-none'>
 							<a
 								class='btn btn-social-icon btn-instagram'
@@ -81,6 +80,8 @@ const Footer = () => {
 								<i class='fa fa-facebook'></i>
 							</a>
 						</div>
+					</Col>
+					<Col>
 						<ContactForm />
 					</Col>
 				</Row>
