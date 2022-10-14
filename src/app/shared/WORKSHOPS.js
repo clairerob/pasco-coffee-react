@@ -11,7 +11,7 @@ const WORKSHOPDESCRIPTIONS = {
 };
 
 const WORKSHOPIMAGES = {
-    cupping: logo,
+    cupping: latteArt,
     brewing: v60,
     espresso: latte,
     latte_art: latteArt

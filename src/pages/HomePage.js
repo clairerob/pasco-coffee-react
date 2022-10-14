@@ -6,6 +6,7 @@ import MenuCarousel from '../features/menu/MenuCarousel';
 import ClassInfo from '../features/coffeeclasses/ClassInfo';
 
 const HomePage = () => {
+	
 	return (
 		<div>
 			<img
@@ -28,15 +29,16 @@ const HomePage = () => {
 				</Row>
 				<Row className='justify-content-center'>
 					{/* change this link  */}
-					<Link to='/about' class='btn col-6 col-md-4'>
+					<a href='/#footer' class='btn col-6 col-md-4'>
 						find us
-					</Link>
+					</a>
 				</Row>
 			</Container>
 			<Container>
 				<CoffeeInfo />
 				<MenuCarousel />
 				<ClassInfo />
+				<div id='footer' />
 			</Container>
 		</div>
 	);

@@ -8,11 +8,15 @@ import AboutPage from './pages/AboutPage';
 import TheCoffeePage from './pages/TheCoffeePage';
 import CoffeeMapPage from './pages/CoffeeMapPage';
 import CoffeeClassesPage from './pages/CoffeeClassesPage';
+import ContactPage from './pages/ContactPage';
 import OrderPage from './pages/OrderPage';
+import ScrollToTop from './components/ScrollToTop';
+
 
 const App = () => {
     return (
         <div  className='app'>
+            <ScrollToTop>
             <Header />
             <Routes >
                 <Route path='/' element={<HomePage/>} />
@@ -21,9 +25,11 @@ const App = () => {
                 <Route path='/coffee' element={<TheCoffeePage/>} />
                 <Route path='/coffee-map' element={<CoffeeMapPage/>} />
                 <Route path='/coffee-classes' element={<CoffeeClassesPage/>} />
+                <Route path='/contact' element={<ContactPage/>} />
                 <Route path='/order' element={<OrderPage />} />
             </Routes>
             <Footer />
+            </ScrollToTop>
         </div>
     )
 };

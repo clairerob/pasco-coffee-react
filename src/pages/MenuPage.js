@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'reactstrap';
 import MenuList from '../features/menu/MenuList';
-import CoffeeMenuList from '../features/coffeemap/CoffeeMenuList';
+import CoffeeMenuList from '../features/menu/CoffeeMenuList';
 
 const MenuPage = () => {
     return (

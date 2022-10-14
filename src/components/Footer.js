@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import ContactForm from './ContactForm';
 
 const Footer = () => {
 	return (
@@ -80,7 +81,7 @@ const Footer = () => {
 								<i class='fa fa-facebook'></i>
 							</a>
 						</div>
-						ContactForm
+						<ContactForm />
 					</Col>
 				</Row>
 			</Container>

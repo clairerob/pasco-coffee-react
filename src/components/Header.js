@@ -8,7 +8,6 @@ import {
 	NavItem,
 } from 'reactstrap';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../app/assets/pasco-logo.png';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +20,7 @@ const Header = () => {
 					ORDER ONLINE
 				</Link>
 			</div>
-			<Navbar sticky='top' expand='sm' light className='mx-md-3 mx-lg-5'>
+			<Navbar sticky='top' expand='sm' light className='mx-auto px-sm-3 px-lg-5'>
 				<NavbarBrand href='/'>
 					{/* <img
 						src={logo}
@@ -29,7 +28,7 @@ const Header = () => {
 						width='100px'
 						height='100px'
 					/> */}
-					<h1 className='brand-name'>Pasco Coffee</h1>
+					<h1 className='brand-name p-3'>Pasco Coffee</h1>
 				</NavbarBrand>
 
 				<NavbarToggler
@@ -37,9 +36,9 @@ const Header = () => {
 					onClick={() => setMenuOpen(!menuOpen)}
 				/>
 				<Collapse isOpen={menuOpen} navbar className='justify-content-end'>
-					<Nav navbar onClick={() => setMenuOpen(!menuOpen)}>
+					<Nav navbar onClick={() => setMenuOpen(!menuOpen)} className='navlinks'>
 						<NavItem>
-							<NavLink className='nav-link' to='/'>
+							<NavLink className='nav-link hi' to='/'>
 								home
 							</NavLink>
 						</NavItem>

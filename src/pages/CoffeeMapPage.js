@@ -3,13 +3,14 @@ import ReactTooltip from 'react-tooltip';
 import { useState } from 'react';
 import CoffeeMap from '../features/coffeemap/CoffeeMap';
 import { Container, Row, Col } from 'react-bootstrap';
+import RoastersList from '../features/coffeemap/RoastersList';
 
 const CoffeeMapPage = () => {
 	const [tooltipContent, setTooltipContent] = useState('');
 
 	return (
 		<div className='mapPage'>
-			<h1 className='text-center m-5'>single-origin coffee map</h1>
+			<h1 className='text-center m-5'>the coffee map</h1>
 
 			<Container>
 				<Row>
@@ -50,6 +51,7 @@ const CoffeeMapPage = () => {
 						</ReactTooltip>
 					</Col>
 				</Row>
+					<RoastersList />
 			</Container>
 		</div>
 	);
