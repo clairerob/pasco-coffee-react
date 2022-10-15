@@ -11,7 +11,7 @@ const ClassCard = ({ workshop }) => {
 		        <CardTitle className='text-light'><h2>{name}</h2></CardTitle>
 		    </CardImgOverlay>
 		    <CardBody>
-		        <CardText>{description}</CardText>
+		        <CardText>{description.toLowerCase()}</CardText>
 		    <h4>{date}</h4>
 		    </CardBody>
 			<CardFooter>

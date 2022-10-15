@@ -1,7 +1,7 @@
 import v60 from '../assets/v60.jpg';
 import latte from '../assets/latte-pour.jpg';
-import logo from '../assets/pasco-logo.png';
 import latteArt from '../assets/latte-art.jpg';
+import tonic from '../assets/tonic-detail.jpg';
 
 const WORKSHOPDESCRIPTIONS = {
     cupping: 'A guided group cupping session comparing a variety of coffees from around the world, exploring the different impacts on the beans of processing, roasting and the soil it grew in. Great for anyone new to coffee tasting as well as those just looking to try something new!',
@@ -11,7 +11,7 @@ const WORKSHOPDESCRIPTIONS = {
 };
 
 const WORKSHOPIMAGES = {
-    cupping: latteArt,
+    cupping: tonic,
     brewing: v60,
     espresso: latte,
     latte_art: latteArt
@@ -21,8 +21,9 @@ const WORKSHOPS = [
     {
         id: 0,
         date: '11/01/2022',
+        month: 'november',
         name: 'cupping',
-        max_spaces: 4,
+        spaces: 2,
         featured: true,
         description: WORKSHOPDESCRIPTIONS.cupping,
         image: WORKSHOPIMAGES.cupping,
@@ -30,44 +31,59 @@ const WORKSHOPS = [
     {
         id: 1,
         date: '11/15/2022',
-        name: 'cupping',
-        max_spaces: 4,
-        featured: false,
-        description: WORKSHOPDESCRIPTIONS.cupping,
-        image: WORKSHOPIMAGES.cupping,
-    },
-    {
-        id: 2,
-        date: '11/29/2022',
+        month: 'november',
         name: 'brewing',
-        max_spaces: 4,
+        spaces: 1,
         featured: false,
         description: WORKSHOPDESCRIPTIONS.brewing,
         image: WORKSHOPIMAGES.brewing,
     },
     {
+        id: 2,
+        date: '11/29/2022',
+        month: 'november',
+        name: 'cupping',
+        spaces: 2,
+        featured: false,
+        description: WORKSHOPDESCRIPTIONS.cupping,
+        image: WORKSHOPIMAGES.cupping,
+    },
+    {
         id: 3,
         date: '12/12/2022',
+        month: 'december',
         name: 'latte_art',
         max_spaces: 4,
         featured: false,
         description: WORKSHOPDESCRIPTIONS.espresso,
-        image: WORKSHOPIMAGES.espresso,
+        image: WORKSHOPIMAGES.latte_art,
     },
     {
         id: 4,
         date: '12/28/2022',
+        month: 'december',
         name: 'cupping',
-        max_spaces: 4,
+        spaces: 4,
         featured: false,
         description: WORKSHOPDESCRIPTIONS.cupping,
         image: WORKSHOPIMAGES.cupping,
     },
     {
         id: 5,
+        date: '12/05/2022',
+        month: 'december',
+        name: 'brewing',
+        spaces: 3,
+        featured: false,
+        description: WORKSHOPDESCRIPTIONS.brewing,
+        image: WORKSHOPIMAGES.brewing,
+    },
+    {
+        id: 6,
         date: '12/29/2022',
+        month: 'december',
         name: 'espresso',
-        max_spaces: 4,
+        spaces: 0,
         featured: false,
         description: WORKSHOPDESCRIPTIONS.espresso,
         image: WORKSHOPIMAGES.espresso,

@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 const ContactPage = () => {
 	return (
-		<Container className='mt-5'>
+		<Container className='mt-5 page-overlay'>
 			<h1 className='text-center'>get in touch!</h1>
 			<Row className='justify-content-around'>
 				<Col xs='12' md='6' className='mt-2'>

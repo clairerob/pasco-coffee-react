@@ -34,7 +34,7 @@ const HomePage = () => {
 					</a>
 				</Row>
 			</Container>
-			<Container>
+			<Container className='page-overlay'>
 				<CoffeeInfo />
 				<MenuCarousel />
 				<ClassInfo />

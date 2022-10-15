@@ -4,7 +4,7 @@ import CoffeeInfo from '../features/coffeemap/CoffeeInfo';
 
 const TheCoffeePage = () => {
     return (
-        <Container className='pt-5 text-center'>
+        <Container className='pt-5 text-center page-overlay'>
             <Row className='px-4 justify-content-center'>
                 <Col lg='10' xl='9'>
                 <h2>all about the coffee</h2>

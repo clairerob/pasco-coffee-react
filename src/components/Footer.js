@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
+import UserLoginForm from '../features/user/UserLoginForm';
 
 const Footer = () => {
 	return (
@@ -80,8 +81,9 @@ const Footer = () => {
 								<i class='fa fa-facebook'></i>
 							</a>
 						</div>
+						<UserLoginForm />
 					</Col>
-					<Col>
+					<Col className='d-none d-sm-block'>
 						<ContactForm />
 					</Col>
 				</Row>

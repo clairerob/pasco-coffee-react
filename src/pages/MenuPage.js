@@ -1,10 +1,10 @@
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import MenuList from '../features/menu/MenuList';
 import CoffeeMenuList from '../features/menu/CoffeeMenuList';
 
 const MenuPage = () => {
     return (
-        <Container className='text-center menu-container pt-5'>
+        <Container className='text-center menu-container pt-5 page-overlay'>
             <Row>
                 <Col>
                 <h1>menu</h1>
@@ -18,6 +18,9 @@ const MenuPage = () => {
             <Row>
             <Col xs='12' className='py-4'><h5>an ever-changing selection of single-origins, hand-brewed to order. prices vary.</h5></Col>
             <CoffeeMenuList />
+            </Row>
+            <Row className='text-center pt-5 px-3 px-md-5'>
+                <Button className='btn-light'><h2>order online here</h2></Button>
             </Row>
         </Container>
     )

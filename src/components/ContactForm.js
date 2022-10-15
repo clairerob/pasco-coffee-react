@@ -74,7 +74,7 @@ const ContactForm = () => {
 						</Col>
 					</FormGroup>
 					<Col xs={{offset: 5}}>
-					<Button type='submit'>submit</Button>
+					<Button type='submit' className='btn-light'>submit</Button>
 					</Col>
 				</Form>
 			</Formik>
