@@ -123,7 +123,7 @@ footer {
   }
 
   .aboutpage-img {
-	border-radius: 8px;
+	border-radius: 10px;
 	max-height: 600px;
   }
 
@@ -182,4 +182,9 @@ footer {
 
 .page-overlay {
 	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contact-page-location-info {
+	background-color: #63a4ff;
+	border-radius: 10px;
 }

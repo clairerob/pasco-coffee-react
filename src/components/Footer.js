@@ -1,15 +1,29 @@
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
-import UserLoginForm from '../features/user/UserLoginForm';
 
 const Footer = () => {
 	return (
 		<footer className='site-footer'>
 			<Container>
 				<Row className='pb-3'>
-					<Col className=' d-none d-md-block'>
-						<ul className='list-unstyled'>
+					<Col className='d-none d-md-block'>
+						<div>
+							<a
+								className='btn btn-social-icon btn-instagram'
+								href='http://instagram.com/'
+							>
+								<i className='fa fa-instagram'></i>
+							</a>
+							<a
+								className='btn btn-social-icon btn-facebook'
+								href='http://facebook.com/'
+							>
+								<i className='fa fa-facebook'></i>
+							</a>
+						</div>
+
+						<ul className='list-unstyled mt-4'>
 							<li>
 								<Link to='/'>home</Link>
 							</li>
@@ -28,22 +42,12 @@ const Footer = () => {
 							<li>
 								<Link to='/coffee-classes'>coffee classes</Link>
 							</li>
+							<li>
+								<Link to='/contact'>contact us</Link>
+							</li>
 						</ul>
 
-						<div>
-							<a
-								class='btn btn-social-icon btn-instagram'
-								href='http://instagram.com/'
-							>
-								<i class='fa fa-instagram'></i>
-							</a>
-							<a
-								class='btn btn-social-icon btn-facebook'
-								href='http://facebook.com/'
-							>
-								<i class='fa fa-facebook'></i>
-							</a>
-						</div>
+						<a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-light mx-auto my-5 px-5 btn-lg'>order now</Button></a>
 					</Col>
 					<Col>
 						<h5>location</h5>
@@ -81,7 +85,6 @@ const Footer = () => {
 								<i class='fa fa-facebook'></i>
 							</a>
 						</div>
-						<UserLoginForm />
 					</Col>
 					<Col className='d-none d-sm-block'>
 						<ContactForm />

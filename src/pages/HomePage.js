@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CoffeeInfo from '../features/coffeemap/CoffeeInfo';
 import MenuCarousel from '../features/menu/MenuCarousel';
 import ClassInfo from '../features/coffeeclasses/ClassInfo';
+import AboutContent from '../features/AboutContent';
 
 const HomePage = () => {
 	
@@ -38,7 +39,7 @@ const HomePage = () => {
 				<CoffeeInfo />
 				<MenuCarousel />
 				<ClassInfo />
-				<div id='footer' />
+				<AboutContent />
 			</Container>
 		</div>
 	);

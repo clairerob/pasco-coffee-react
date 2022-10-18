@@ -7,7 +7,7 @@ import {
 	Nav,
 	NavItem,
 } from 'reactstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -16,9 +16,9 @@ const Header = () => {
 	return (
 		<div className='header'>
 			<div className='order-banner'>
-				<Link className='order-banner' to='/order'>
+				<a className='order-banner' href='https://pasco-farms.square.site/pasco-coffee-bar'>
 					ORDER ONLINE
-				</Link>
+				</a>
 			</div>
 			<Navbar sticky='top' expand='sm' light className='mx-auto px-sm-3 px-lg-5'>
 				<NavbarBrand href='/'>
