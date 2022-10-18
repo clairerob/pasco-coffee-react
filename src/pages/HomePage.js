@@ -6,8 +6,12 @@ import MenuCarousel from '../features/menu/MenuCarousel';
 import ClassInfo from '../features/coffeeclasses/ClassInfo';
 import AboutContent from '../features/AboutContent';
 
+
+
+
+
 const HomePage = () => {
-	
+
 	return (
 		<div>
 			<img
@@ -39,7 +43,7 @@ const HomePage = () => {
 				<CoffeeInfo />
 				<MenuCarousel />
 				<ClassInfo />
-				<AboutContent />
+				<AboutContent className='my-lg-5'/>
 			</Container>
 		</div>
 	);

@@ -1,21 +1,23 @@
 :root {
 	--dark-green-text-color: #033d4a;
-	--white-text-color: #fdfdfd;
+	--off-white-color: #fdfdfd;
 	--dark-gold-color: #d8a600;
 	--light-gold-color: #fad65e;
+	--black: rgb(2, 20, 24);
+	--light-blue: #3b7ae6;
 }
 
 
 .order-banner {
-	background-color: rgb(2, 20, 24);
+	background-color: var(--black);
 	text-align: center;
 	padding: 0.5rem;
 	height: 2.5rem;
 	text-decoration: none;
-	color: var(--white-text-color);
+	color: var(--off-white-color);
 }
-.order-banner :hover {
-	color: #fad65e;
+.order-banner:hover {
+	color: var(--light-gold-color);
 }
 
 
@@ -24,21 +26,17 @@
 }
 
 
-
-
-
-
 nav {
 	max-width: 1200px;
 }
 .brand-name {
-	background-color: #fdfdfd;
+	background-color: var(--off-white-color);
 }
 #overlay a {
-	color: rgb(3, 61, 74);
+	color: var(--dark-green-text-color);
 }
 #overlay a:hover, .brand-name:hover, .nav-link:hover {
-	color: #d8a600;
+	color: var(--dark-gold-color);
 }
 
 .header {
@@ -51,11 +49,11 @@ nav {
 }
 
 .navbar-toggler-icon {
-	color: rgb(2, 20, 24);
+	color: var(--black);
 }
 
 .navlinks {
-	background-color: #fdfdfd;
+	background-color: var(--off-white-color);
 }
 
 h2 {
@@ -70,12 +68,12 @@ h2 {
 	background-color: #d1d5d57f;
 	border-radius: 30px;
 	max-width: 750px;
-	color: rgb(2, 20, 24);
+	color: var(--black);
 	top: 15%;
-	color: rgb(3, 61, 74);
+	color: var(--dark-green-text-color);
 }
 #overlay a {
-	color: rgb(3, 61, 74);
+	color: var(--dark-green-text-color);
 }
 
 footer {
@@ -114,7 +112,7 @@ footer {
   }
 
   .mapPage {
-	background-color: #fdfdfd;
+	background-color: var(--off-white-color);
 	padding: 5px;
   }
 
@@ -130,19 +128,19 @@ footer {
   .aboutpage-btn {
 	width: 100%;
 	height: 3rem;
-	background-color: #d8a600;
+	background-color: var(--dark-gold-color);
   }
 
   .aboutpage-container {
-	color: rgb(3, 61, 74);
+	color: vaR(--dark-green-text-color);
   }
 
   .carousel-links {
 	text-decoration: none;
-	color: #fdfdfd;
+	color: var(var(--off-white-color));
   }
   .carousel-links:hover {
-	color: #d8a600;
+	color: var(--dark-gold-color);
   }
 
   .coffee-class-card {
@@ -154,16 +152,16 @@ footer {
   
   .contact-page-location-link {
 	text-decoration: none;
-	color: rgb(3, 61, 74);
+	color: var(--dark-green-text-color);
   }
   .contact-page-location-link:hover {
-	color: #d8a600;
+	color: var(--dark-gold-color);
   }
 
   
 
 .site-footer a {
-	color: #fad65e;
+	color: var(--light-gold-color);
 	text-decoration: none;
 }
 .site-footer a:hover {
@@ -185,6 +183,27 @@ footer {
 }
 
 .contact-page-location-info {
-	background-color: #63a4ff;
+	background-color: var(--light-blue);
 	border-radius: 10px;
+}
+
+.contact-submit-btn {
+	width: 250px;
+}
+
+.class-filter-bar button {
+	margin: 3px;
+	background: transparent;
+	outline: 2px solid var(--light-blue);
+	color: var(--light-blue);
+}
+
+.filter-on {
+	background: #3b7ae6;
+	color: var(--dark-green-text-color);
+}
+
+.filter-off {
+	background: white;
+	color: violet;
 }

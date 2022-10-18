@@ -2,6 +2,7 @@ import {Row, Col, Button} from 'reactstrap';
 import { useState } from 'react';
 import { getAllWorkshops } from '../../app/shared/WORKSHOPS';
 import ClassCard from './ClassCard';
+import MyButtonGroup from './ButtonGroup';
 
 const ClassFilterBar = () => {
 const workshops = getAllWorkshops();
@@ -29,26 +30,53 @@ const workshops = getAllWorkshops();
     };
 
 
+
+    const filterNameAfterClick = (event) => {
+        setFilterName(event.target.name);
+	};
+    
+    const filterMonthAfterClick = (event) => {
+        setFilterMonth(event.target.name);
+	};
+
+    const filterAvailabilityAfterClick = (event) => {
+        setFilterAvailability(event.target.name);
+	}
+
     return (
         <>
-            <Row className='class-filter-bar bg-dark'> 
-                <Col>
-                filters
+            
+			<MyButtonGroup buttons={['espresso', 'cupping', 'brewing', 'latte-art']}
+			doSthAfterClick={filterNameAfterClick}/> 
+
+			<MyButtonGroup buttons={['november', 'december', 'january', 'february']}
+			doSthAfterClick={filterMonthAfterClick}/> 
+
+			<MyButtonGroup buttons={['1', '2', '3', '4']}
+			doSthAfterClick={filterAvailabilityAfterClick}/>
+            
+            <Row>
+                <Col>filters</Col>
+                <Col>type</Col>
+                <Col>month</Col>
+                <Col>spaces available</Col>
+            </Row>
+
+            <Row className='class-filter-bar'> 
+                <Col className='reset-all-class-filters'>
                 <Button onClick={() => resetFilter()}>reset all</Button>
                 </Col>
-                <Col>
-                type
 
+                <Col>
                 <Button onClick={() => setFilterName('espresso')}>espresso</Button>
                 <Button onClick={() => setFilterName('cupping')}>cupping</Button>
                 <Button onClick={() => setFilterName('brewing')}>brewing</Button>
-                <Button onClick={() => setFilterName('latte_art')}>latte art</Button>
+                <Button onClick={() => setFilterName('latte-art')} className='mr-md-3'>latte art</Button>
 
                 <Button onClick={() => resetName()}>clear</Button>
                 </Col>
+
                 <Col>
-                month
-                
                 <Button onClick={() => setFilterMonth('november')}>november</Button>
                 <Button onClick={() => setFilterMonth('december')}>december</Button>
                 <Button onClick={() => setFilterMonth('january')}>january</Button>
@@ -56,9 +84,8 @@ const workshops = getAllWorkshops();
 
                 <Button onClick={() => resetMonth()}>clear</Button>
                 </Col>
+
                 <Col>
-                spaces available (#)
-                
                 <Button onClick={() => setFilterAvailability(1)}>1</Button>
                 <Button onClick={() => setFilterAvailability(2)}>2</Button>
                 <Button onClick={() => setFilterAvailability(3)}>3</Button>
@@ -67,7 +94,8 @@ const workshops = getAllWorkshops();
                 <Button onClick={() => resetAvailability()}>clear</Button>
                 </Col>
             </Row>
-            <Row className='justify-content-center mx-xl-5 mt-4 g-5'>
+
+            <Row className='justify-content-center mx-xl-5 mt-2 g-5'>
                 {workshops.map((workshop) => {
 
                     if (filterName !== null && filterName !== workshop.name) return null;

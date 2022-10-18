@@ -52,7 +52,7 @@ const WORKSHOPS = [
         id: 3,
         date: '12/12/2022',
         month: 'december',
-        name: 'latte_art',
+        name: 'latte-art',
         max_spaces: 4,
         featured: false,
         description: WORKSHOPDESCRIPTIONS.espresso,

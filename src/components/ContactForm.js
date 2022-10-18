@@ -73,8 +73,8 @@ const ContactForm = () => {
 							</ErrorMessage>
 						</Col>
 					</FormGroup>
-					<Col xs={{offset: 5}}>
-					<Button type='submit' className='btn-light'>submit</Button>
+					<Col className='text-center'>
+					<Button type='submit' className='btn-light contact-submit-btn'>submit</Button>
 					</Col>
 				</Form>
 			</Formik>
