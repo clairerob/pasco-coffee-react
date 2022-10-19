@@ -20,7 +20,9 @@ const MenuPage = () => {
             <CoffeeMenuList />
             </Row>
             <Row className='text-center pt-5 px-3 px-md-5'>
-                <a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-light'><h2>order online here</h2></Button></a>
+                <Col>
+                <a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-light btn-lg px-5'><h2>order online here</h2></Button></a>
+                </Col>
             </Row>
         </Container>
     )

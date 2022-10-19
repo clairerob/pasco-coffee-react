@@ -38,45 +38,41 @@ const ClassFilterBar = () => {
 
 	return (
 		<>
-			<MyButtonGroup
-				buttons={['espresso', 'cupping', 'brewing', 'latte-art']}
-				doSthAfterClick={filterNameAfterClick}
-				doResetAfterClick={resetName}
-			/>
-
-			<MyButtonGroup
-				buttons={['november', 'december', 'january', 'february']}
-				doSthAfterClick={filterMonthAfterClick}
-				doResetAfterClick={resetMonth}
-			/>
-
-			<MyButtonGroup
-				buttons={['1', '2', '3', '4']}
-				doSthAfterClick={filterAvailabilityAfterClick}
-				doResetAfterClick={resetAvailability}
-			/>
-
-			<Row>
-				<Col>filters</Col>
-				<Col>type</Col>
-				<Col>month</Col>
-				<Col>spaces available</Col>
-			</Row>
-
-			<Row className='class-filter-bar'>
-				<Col className='reset-all-class-filters'>
+			<div className='class-filter-bar'>
+				<div className='filter-section'>
+					<h5>filters</h5>
 					<button onClick={() => resetFilter()} className='reset-filter-button'>
 						reset all
 					</button>
-				</Col>
+				</div>
+				<div className='filter-section'>
+					<h5>class type</h5>
+					<MyButtonGroup
+						buttons={['espresso', 'cupping', 'brewing', 'latte-art']}
+						doSthAfterClick={filterNameAfterClick}
+						doResetAfterClick={resetName}
+					/>
+				</div>
+				<div className='filter-section'>
+					<h5>month</h5>
+					<MyButtonGroup
+						buttons={['november', 'december', 'january', 'february']}
+						doSthAfterClick={filterMonthAfterClick}
+						doResetAfterClick={resetMonth}
+					/>
+				</div>
+				<div className='filter-section'>
+					<h5>spaces available</h5>
+					<MyButtonGroup
+						buttons={['1', '2', '3', '4']}
+						doSthAfterClick={filterAvailabilityAfterClick}
+						doResetAfterClick={resetAvailability}
+					/>
+				</div>
+			</div>
 
-				<Col></Col>
-
-				<Col></Col>
-
-				<Col></Col>
-
-				{/* <Col>
+			{/* <Row className='class-filter-bar'>
+				<Col>
 					<Button onClick={() => setFilterName('espresso')}>espresso</Button>
 					<Button onClick={() => setFilterName('cupping')}>cupping</Button>
 					<Button onClick={() => setFilterName('brewing')}>brewing</Button>
@@ -106,8 +102,8 @@ const ClassFilterBar = () => {
 					<Button onClick={() => setFilterAvailability(4)}>4</Button>
 
 					<Button onClick={() => resetAvailability()}>clear</Button>
-				</Col> */}
-			</Row>
+				</Col>
+			</Row> */}
 
 			<Row className='justify-content-center mx-xl-5 mt-2 g-5'>
 				{workshops.map((workshop) => {

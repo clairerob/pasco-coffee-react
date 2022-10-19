@@ -61,7 +61,7 @@ const ContactForm = () => {
 					</FormGroup>
 					<FormGroup row className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='comment'>what do you want to ask/tell us?</Label>
+							<Label htmlFor='comment'>what's up?</Label>
 							<Field
 								name='comment'
 								as='textarea'

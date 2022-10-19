@@ -5,6 +5,7 @@
 	--light-gold-color: #fad65e;
 	--black: rgb(2, 20, 24);
 	--light-blue: #3b7ae6;
+	--dark-red: rgb(161, 34, 43);
 }
 
 
@@ -132,7 +133,7 @@ footer {
   }
 
   .aboutpage-container {
-	color: vaR(--dark-green-text-color);
+	color: var(--dark-green-text-color);
   }
 
   .carousel-links {
@@ -141,13 +142,6 @@ footer {
   }
   .carousel-links:hover {
 	color: var(--dark-gold-color);
-  }
-
-  .coffee-class-card {
-	border-radius: 10px;
-  }
-  .class-card-img {
-	border-radius: 10px;
   }
   
   .contact-page-location-link {
@@ -179,7 +173,8 @@ footer {
 }
 
 .page-overlay {
-	background-color: rgba(255, 255, 255, 0.15);
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
 }
 
 .contact-page-location-info {
@@ -191,19 +186,67 @@ footer {
 	width: 250px;
 }
 
-.class-filter-bar button {
-	margin: 3px;
-	background: transparent;
-	outline: 2px solid var(--light-blue);
-	color: var(--light-blue);
+.class-page-intro-text a {
+	text-decoration: none;
+	color: var(--dark-gold-color);
+	font-weight: 600;
 }
 
-.filter-on {
-	background: #3b7ae6;
+.class-filter-bar {
+	display: flex;
+	justify-content: space-evenly;
+}
+.class-filter-bar .filter-section {
+	flex: 1;
+}
+
+.class-filter-bar h4, h5 {
 	color: var(--dark-green-text-color);
 }
 
-.filter-off {
-	background: white;
-	color: violet;
+.class-filter-bar button {
+	margin: 4px;
+	background: transparent;
+	border: 3px solid var(--dark-gold-color);
+	border-radius: 15px;
+	color: var(--dark-gold-color);
+	padding: 5px 10px;
+	font-weight: 600;
+}
+
+.class-filter-bar .filter-on {
+	background: var(--dark-green-text-color);	
+	border: 3px solid var(--dark-green-text-color);
+}
+
+.class-filter-bar .filter-off {
+	background: var(--off-white-color);
+	color: var(--dark-gold-color);
+}
+.class-filter-bar .filter-off:hover {
+	background: var(--dark-gold-color);
+	color: var(--off-white-color);
+}
+
+.class-filter-bar .reset-filter-button {
+	color: var(--dark-red);
+	border: 3px solid var(--dark-red);
+	background: var(--off-white-color);
+}
+.class-filter-bar .reset-filter-button:hover {
+	color: var(--off-white-color);
+	border: 3px solid var(--dark-red);
+	background: var(--dark-red);
+}
+
+.class-filter-bar .reset-group-btn {
+	color:var(--light-blue);
+	border: 3px solid var(--light-blue);
+	background: var(--off-white-color);
+}
+
+.class-filter-bar .reset-group-btn:hover {
+	color: var(--off-white-color);
+	border: 3px solid var(--light-blue);
+	background: var(--light-blue);
 }

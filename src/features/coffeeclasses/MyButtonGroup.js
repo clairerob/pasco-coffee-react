@@ -14,11 +14,7 @@ const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick}) => {
     }
 
     return (
-        <>
-            {/* <button>one</button>
-            <button>two</button>
-            <button>three</button>
-            <button>four</button> */}
+        <div className='my-btn-group'>
             {buttons.map((buttonLabel, i) => (
                 <button key={i} name={buttonLabel}
                 onClick={(event) => handleClick(event, i)}
@@ -26,8 +22,11 @@ const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick}) => {
                     {buttonLabel}
                 </button>
             ))}
-            <button onClick={(event) => handleResetClick(event)}>reset</button>
-        </>
+            <div>
+            <button onClick={(event) => handleResetClick(event)}
+            className='reset-group-btn'>reset</button>
+            </div>
+        </div>
     )
 };
 
