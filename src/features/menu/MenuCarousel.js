@@ -1,4 +1,4 @@
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 import { getFeaturedMenuItems } from '../../app/shared/MENU_ITEMS';
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';

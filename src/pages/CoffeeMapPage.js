@@ -1,4 +1,3 @@
-// import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 import ReactTooltip from 'react-tooltip';
 import { useState } from 'react';
 import CoffeeMap from '../features/coffeemap/CoffeeMap';

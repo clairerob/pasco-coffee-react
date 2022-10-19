@@ -1,12 +1,12 @@
 import v60 from '../../app/assets/v60.jpg';
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const CoffeeInfo = () => {
 	return (
 		<Row className='align-items-space-between row-content mx-3 my-5'>
 			<Col>
-				<img className='ml-3 img-fluid coffee-info-img' src={v60} />
+				<img className='ml-3 img-fluid coffee-info-img' src={v60} alt='some coffee' />
 			</Col>
 			<Col sm='6' lg='4' className='align-self-center'>
 				<h1>our coffee</h1>

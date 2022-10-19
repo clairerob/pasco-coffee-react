@@ -1,5 +1,5 @@
 import { getAllRoasteries } from '../../app/shared/ROASTERIES';
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 
 const RoastersList = () => {
 	const roasteries = getAllRoasteries();

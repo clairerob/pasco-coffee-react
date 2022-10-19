@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import MenuList from '../features/menu/MenuList';
 import CoffeeMenuList from '../features/menu/CoffeeMenuList';
 
@@ -20,7 +20,7 @@ const MenuPage = () => {
             <CoffeeMenuList />
             </Row>
             <Row className='text-center pt-5 px-3 px-md-5'>
-                <Button className='btn-light'><h2>order online here</h2></Button>
+                <a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-light'><h2>order online here</h2></Button></a>
             </Row>
         </Container>
     )

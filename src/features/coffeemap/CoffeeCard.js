@@ -1,5 +1,5 @@
 import v60 from '../../app/assets/v60.jpg';
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 
 const CoffeeCard = () => {
 	return (

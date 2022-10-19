@@ -1,4 +1,4 @@
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import latte from '../../app/assets/latte-pour.jpg';
 

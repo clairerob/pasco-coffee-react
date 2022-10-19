@@ -1,4 +1,4 @@
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 import { getAllWorkshops } from '../../app/shared/WORKSHOPS';
 import ClassCard from './ClassCard';
 

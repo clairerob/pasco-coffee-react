@@ -1,4 +1,4 @@
-import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'react-bootstrap';
 import owner from '../app/assets/owner.jpg';
 
 const AboutContent = () => {

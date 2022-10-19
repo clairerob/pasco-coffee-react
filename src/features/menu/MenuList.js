@@ -1,6 +1,6 @@
 import MenuItem from './MenuItem';
 import { getCurrentMenuItems } from '../../app/shared/MENU_ITEMS';
-import { Col } from 'reactstrap';
+import { Col } from 'react-bootstrap';
 
 const MenuList = () => {
 	const items = getCurrentMenuItems();

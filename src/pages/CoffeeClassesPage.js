@@ -1,5 +1,5 @@
 // import ClassList from '../features/coffeeclasses/ClassList';
-import { Container } from 'reactstrap';
+import { Container } from 'react-bootstrap';
 import ClassFilterBar from '../features/coffeeclasses/ClassFilterBar';
 
 const CoffeeClassesPage = () => {

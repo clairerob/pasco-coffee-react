@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import ClassInfo from '../features/coffeeclasses/ClassInfo';
 import CoffeeInfo from '../features/coffeemap/CoffeeInfo';
 

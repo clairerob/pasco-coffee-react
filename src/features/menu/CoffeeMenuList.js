@@ -1,6 +1,6 @@
 import CoffeeMenuItem from './CoffeeMenuItem';
 import { getCurrentCoffees } from '../../app/shared/COFFEES';
-import { Col } from 'reactstrap';
+import { Col } from 'react-bootstrap';
 
 const CoffeeMenuList = () => {
 	const items = getCurrentCoffees();

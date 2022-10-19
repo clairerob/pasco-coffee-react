@@ -1,11 +1,16 @@
 import { useState } from 'react';
 
-const MyButtonGroup = ({buttons, doSthAfterClick}) => {
+const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick}) => {
     const [activeId, setActiveId] = useState(-1);
 
     const handleClick = (event, id) => {
         setActiveId(id);
         doSthAfterClick(event);
+    };
+
+    const handleResetClick = (event) => {
+        setActiveId(-1);
+        doResetAfterClick(event);
     }
 
     return (
@@ -21,6 +26,7 @@ const MyButtonGroup = ({buttons, doSthAfterClick}) => {
                     {buttonLabel}
                 </button>
             ))}
+            <button onClick={(event) => handleResetClick(event)}>reset</button>
         </>
     )
 };
