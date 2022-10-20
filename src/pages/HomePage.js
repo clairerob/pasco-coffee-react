@@ -8,8 +8,6 @@ import AboutContent from '../features/AboutContent';
 
 
 
-
-
 const HomePage = () => {
 
 	return (
@@ -28,13 +26,13 @@ const HomePage = () => {
 					</Col>
 				</Row>
 				<Row className='justify-content-center'>
-					<Link to='/menu' class='btn col-6 col-md-4'>
+					<Link to='/menu' className='btn col-6 col-md-4'>
 						our menu
 					</Link>
 				</Row>
 				<Row className='justify-content-center'>
 					{/* change this link  */}
-					<a href='/#footer' class='btn col-6 col-md-4'>
+					<a href='/#footer' className='btn col-6 col-md-4'>
 						find us
 					</a>
 				</Row>

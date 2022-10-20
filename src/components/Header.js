@@ -19,7 +19,7 @@ const Header = () => {
 			<Navbar
 				sticky='top'
 				expand='sm'
-				light
+				light='true'
 				className='mx-auto px-sm-3 px-lg-5'
 				collapseOnSelect={true}
 			>
