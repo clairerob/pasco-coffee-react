@@ -32,7 +32,6 @@ nav {
 }
 .brand-name {
 	background-color: var(--off-white-color);
-	border-radius: 10px;
 }
 #overlay a {
 	color: var(--dark-green-text-color);
@@ -250,8 +249,4 @@ footer {
 	color: var(--off-white-color);
 	border: 3px solid var(--light-blue);
 	background: var(--light-blue);
-}
-
-.coffee-class-card:hover {
-	cursor: pointer;
 }
