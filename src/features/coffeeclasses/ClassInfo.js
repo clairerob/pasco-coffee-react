@@ -13,7 +13,7 @@ const ClassInfo = () => {
 					<h1>classes</h1>
 					<p className='info-text'>
 						join us for cupping sessions, home brewing and espresso classes{' '}
-						<Link to='/coffee-classes' class='btn btn-dark'>
+						<Link to='/coffee-classes' className='btn btn-dark'>
 							book now
 						</Link>
 					</p>

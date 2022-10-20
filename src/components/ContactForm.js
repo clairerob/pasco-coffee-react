@@ -1,5 +1,5 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { Button, FormGroup, Col } from 'react-bootstrap';
+import { ErrorMessage, Field, Formik } from 'formik';
+import { Button, Form, Col } from 'react-bootstrap';
 import { validateContactForm } from '../utils/validateContactForm';
 
 const ContactForm = () => {
@@ -20,7 +20,7 @@ const ContactForm = () => {
 				validate={validateContactForm}
 			>
 				<Form>
-					<FormGroup row className='justify-content-center'>
+					<Form.Group row='true' className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
 							<Form.Label htmlFor='name'>name</Form.Label>
 							<Field
@@ -32,8 +32,8 @@ const ContactForm = () => {
 								{(msg) => <p className='text-danger'>{msg}</p>}
 							</ErrorMessage>
 						</Col>
-					</FormGroup>
-					<FormGroup row className='justify-content-center'>
+					</Form.Group>
+					<Form.Group row='true' className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
 							<Form.Label htmlFor='email'>email</Form.Label>
 							<Field
@@ -46,10 +46,10 @@ const ContactForm = () => {
 								{(msg) => <p className='text-danger'>{msg}</p>}
 							</ErrorMessage>
 						</Col>
-					</FormGroup>
-					<FormGroup row className='justify-content-center'>
+					</Form.Group>
+					<Form.Group row='true' className='justify-content-center'>
 						<Col >
-							<Form.Label check xs={{offset:1}} md={{offset:0}} lg={{offset:1}} xl={{offset:2}}>
+							<Form.Label check='true' xs={{offset:1}} md={{offset:0}} lg={{offset:1}} xl={{offset:2}}>
 							<Field
 								name='agree'
 								type='checkbox'
@@ -58,8 +58,8 @@ const ContactForm = () => {
 							{' '}may we contact you?
 							</Form.Label>
 						</Col>
-					</FormGroup>
-					<FormGroup row className='justify-content-center'>
+					</Form.Group>
+					<Form.Group row='true' className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
 							<Form.Label htmlFor='comment'>what's up?</Form.Label>
 							<Field
@@ -72,8 +72,8 @@ const ContactForm = () => {
 								{(msg) => <p className='text-danger'>{msg}</p>}
 							</ErrorMessage>
 						</Col>
-					</FormGroup>
-					<Col className='text-center'>
+					</Form.Group>
+					<Col className='mt-4' xs='10' md='12' lg='10' xl='8'>
 					<Button type='submit' className='btn-light contact-submit-btn'>submit</Button>
 					</Col>
 				</Form>
