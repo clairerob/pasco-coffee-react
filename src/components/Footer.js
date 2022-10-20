@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
 

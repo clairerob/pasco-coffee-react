@@ -1,5 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { Button, FormGroup, Label, Col } from 'reactstrap';
+import { Button, FormGroup, Col } from 'react-bootstrap';
 import { validateContactForm } from '../utils/validateContactForm';
 
 const ContactForm = () => {
@@ -22,7 +22,7 @@ const ContactForm = () => {
 				<Form>
 					<FormGroup row className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='name'>name</Label>
+							<Form.Label htmlFor='name'>name</Form.Label>
 							<Field
 								name='name'
 								placeholder='name'
@@ -35,7 +35,7 @@ const ContactForm = () => {
 					</FormGroup>
 					<FormGroup row className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='email'>email</Label>
+							<Form.Label htmlFor='email'>email</Form.Label>
 							<Field
 								name='email'
 								placeholder='email'
@@ -49,19 +49,19 @@ const ContactForm = () => {
 					</FormGroup>
 					<FormGroup row className='justify-content-center'>
 						<Col >
-							<Label check xs={{offset:1}} md={{offset:0}} lg={{offset:1}} xl={{offset:2}}>
+							<Form.Label check xs={{offset:1}} md={{offset:0}} lg={{offset:1}} xl={{offset:2}}>
 							<Field
 								name='agree'
 								type='checkbox'
 								className='form-check-input text-info'
 							/>
 							{' '}may we contact you?
-							</Label>
+							</Form.Label>
 						</Col>
 					</FormGroup>
 					<FormGroup row className='justify-content-center'>
 						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='comment'>what's up?</Label>
+							<Form.Label htmlFor='comment'>what's up?</Form.Label>
 							<Field
 								name='comment'
 								as='textarea'
