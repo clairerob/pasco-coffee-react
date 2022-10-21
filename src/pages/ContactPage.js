@@ -3,11 +3,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const ContactPage = () => {
 	return (
-		<Container className='mt-5 page-overlay'>
+		<Container className='mt-5 page-overlay justify-content-center'>
 			<h1 className='text-center'>get in touch!</h1>
 			<Row className='justify-content-around'>
 				<Col xs='12' md='6' className='mt-2'>
-					<ContactForm />
+					<ContactForm/>
 				</Col>
 				<Col className='mt-5 contact-page-location-info pt-4 pb-3 px-4'>
 						<Row>

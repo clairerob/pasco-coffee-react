@@ -16,7 +16,7 @@ const MenuCarousel = () => {
 	return (
 		<Row className='row-content justify-content-center'>
 			<Col md='9'>
-				<Carousel activeIndex={index} onSelect={handleSelect}>
+				<Carousel className='menu-carousel' activeIndex={index} onSelect={handleSelect}>
 					{items.map((item) => {
 						return (
 							<Carousel.Item key={item.id}>
@@ -25,10 +25,10 @@ const MenuCarousel = () => {
 									src={item.image}
 									alt={item.drink}
 								/>
-								<Carousel.Caption>
+								<Carousel.Caption className='menu-carousel-captions'>
 									<Link to='/menu' className='carousel-links'>
 										<h3>{item.drink}</h3>
-										<p className='d-none d-md-block'>{item.description}</p>
+										<p className='d-none d-sm-block'>{item.description}</p>
 									</Link>
 								</Carousel.Caption>
 							</Carousel.Item>

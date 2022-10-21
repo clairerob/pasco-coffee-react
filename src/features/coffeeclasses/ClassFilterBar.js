@@ -11,7 +11,7 @@ const ClassFilterBar = () => {
 	const [filterMonth, setFilterMonth] = useState(null);
 	const [filterAvailability, setFilterAvailability] = useState(null);
 
-	const resetFilter = () => {
+	const resetAllFilter = () => {
 		setFilterName(null);
 		setFilterMonth(null);
 		setFilterAvailability(null);
@@ -41,7 +41,7 @@ const ClassFilterBar = () => {
 			<div className='class-filter-bar'>
 				<div className='filter-section'>
 					<h5>filters</h5>
-					<button onClick={() => resetFilter()} className='reset-filter-button'>
+					<button onClick={() => resetAllFilter()} className='reset-filter-button'>
 						reset all
 					</button>
 				</div>
