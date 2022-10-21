@@ -11,10 +11,13 @@ const ClassFilterBar = () => {
 	const [filterMonth, setFilterMonth] = useState(null);
 	const [filterAvailability, setFilterAvailability] = useState(null);
 
+	const [resetAll, setResetAll] = useState(false);
+
 	const resetAllFilter = () => {
 		setFilterName(null);
 		setFilterMonth(null);
 		setFilterAvailability(null);
+		setResetAll(true);
 	};
 	const resetName = () => {
 		setFilterName(null);
@@ -28,12 +31,15 @@ const ClassFilterBar = () => {
 
 	const filterNameAfterClick = (event) => {
 		setFilterName(event.target.name);
+		setResetAll(false);
 	};
 	const filterMonthAfterClick = (event) => {
 		setFilterMonth(event.target.name);
+		setResetAll(false);
 	};
 	const filterAvailabilityAfterClick = (event) => {
 		setFilterAvailability(event.target.name);
+		setResetAll(false);
 	};
 
 	return (
@@ -51,6 +57,7 @@ const ClassFilterBar = () => {
 						buttons={['espresso', 'cupping', 'brewing', 'latte-art']}
 						doSthAfterClick={filterNameAfterClick}
 						doResetAfterClick={resetName}
+						resetAll={resetAll}
 					/>
 				</div>
 				<div className='filter-section'>
@@ -59,6 +66,7 @@ const ClassFilterBar = () => {
 						buttons={['november', 'december', 'january', 'february']}
 						doSthAfterClick={filterMonthAfterClick}
 						doResetAfterClick={resetMonth}
+						resetAll={resetAll}
 					/>
 				</div>
 				<div className='filter-section'>
@@ -67,6 +75,7 @@ const ClassFilterBar = () => {
 						buttons={['1', '2', '3', '4']}
 						doSthAfterClick={filterAvailabilityAfterClick}
 						doResetAfterClick={resetAvailability}
+						resetAll={resetAll}
 					/>
 				</div>
 			</div>

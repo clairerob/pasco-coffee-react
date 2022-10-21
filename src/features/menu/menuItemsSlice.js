@@ -1,4 +1,4 @@
-import { MENU_ITEMS } from menuItemsSlice.js;
+import { MENU_ITEMS } from '../../app/shared/MENU_ITEMS';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -12,9 +12,9 @@ const menuItemsSlice = createSlice({
 
 export const menuItemsReducer = menuItemsSlice.reducer;
 
-export const getAllMenuItems = () => {
-    return MENU_ITEMS;
-};
+// export const getAllMenuItems = () => {
+//     return MENU_ITEMS;
+// };
 
 export const getFeaturedMenuItems = () => {
     return MENU_ITEMS.filter(item => item.featured);

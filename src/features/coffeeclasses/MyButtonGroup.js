@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick}) => {
+const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick, resetAll}) => {
     const [activeId, setActiveId] = useState(-1);
 
-    const handleClick = (event, id) => {
-        setActiveId(id);
+    const handleClick = (event, buttonLabel) => {
+        setActiveId(buttonLabel);
         doSthAfterClick(event);
     };
 
@@ -15,10 +15,10 @@ const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick}) => {
 
     return (
         <div className='my-btn-group'>
-            {buttons.map((buttonLabel, i) => (
-                <button key={i} name={buttonLabel}
-                onClick={(event) => handleClick(event, i)}
-                className={i === activeId ? 'filter-on' : 'filter-off'}>
+            {buttons.map((buttonLabel) => (
+                <button key={buttonLabel} name={buttonLabel}
+                onClick={(event) => handleClick(event, buttonLabel)}
+                className={buttonLabel === activeId && !resetAll ? 'filter-on' : 'filter-off'}>
                     {buttonLabel}
                 </button>
             ))}
