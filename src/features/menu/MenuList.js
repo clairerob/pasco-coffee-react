@@ -1,9 +1,12 @@
 import MenuItem from './MenuItem';
-import { getCurrentMenuItems } from '../../app/shared/MENU_ITEMS';
+import { getCurrentMenuItems } from './menuItemsSlice';
 import { Col } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
 const MenuList = () => {
-	const items = getCurrentMenuItems();
+	const items = useSelector(getCurrentMenuItems);
+
+	console.log(items);
 
 	return (
 		<>

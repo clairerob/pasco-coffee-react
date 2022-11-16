@@ -1,33 +1,54 @@
 import { useState } from 'react';
 
-const MyButtonGroup = ({buttons, doSthAfterClick, doResetAfterClick, resetAll}) => {
-    const [activeId, setActiveId] = useState(-1);
+// export const MyButtonGroup2 = (props) => (
+// 	<div className='my-btn-group'>{props.children}</div>
+// );
 
-    const handleClick = (event, buttonLabel) => {
-        setActiveId(buttonLabel);
-        doSthAfterClick(event);
-    };
+const MyButtonGroup = ({
+	buttons,
+	doSthAfterClick,
+	doResetAfterClick,
+	// resetAll
+}) => {
+	const [activeId, setActiveId] = useState(-1);
 
-    const handleResetClick = (event) => {
-        setActiveId(-1);
-        doResetAfterClick(event);
-    }
+	const handleClick = (event, buttonLabel) => {
+		setActiveId(buttonLabel);
+		doSthAfterClick(event);
+	};
 
-    return (
-        <div className='my-btn-group'>
-            {buttons.map((buttonLabel) => (
-                <button key={buttonLabel} name={buttonLabel}
-                onClick={(event) => handleClick(event, buttonLabel)}
-                className={buttonLabel === activeId && !resetAll ? 'filter-on' : 'filter-off'}>
-                    {buttonLabel}
-                </button>
-            ))}
-            <div>
-            <button onClick={(event) => handleResetClick(event)}
-            className='reset-group-btn'>reset</button>
-            </div>
-        </div>
-    )
+	const handleResetClick = (event) => {
+		setActiveId(-1);
+		doResetAfterClick(event);
+	};
+
+	return (
+		<div className='my-btn-group'>
+			{buttons.map((buttonLabel) => (
+				<button
+					key={buttonLabel}
+					name={buttonLabel}
+					onClick={(event) => handleClick(event, buttonLabel)}
+					className={
+						buttonLabel === activeId
+							? // && !resetAll
+							  'filter-on'
+							: 'filter-off'
+					}
+				>
+					{buttonLabel}
+				</button>
+			))}
+			<div>
+				<button
+					onClick={(event) => handleResetClick(event)}
+					className='reset-group-btn'
+				>
+					reset
+				</button>
+			</div>
+		</div>
+	);
 };
 
 export default MyButtonGroup;

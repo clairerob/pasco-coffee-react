@@ -1,23 +1,24 @@
 import { Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
-import { getAllWorkshops } from '../../app/shared/WORKSHOPS';
+import { getAllClasses } from './classesSlice';
+import { useSelector } from 'react-redux';
 import ClassCard from './ClassCard';
 import MyButtonGroup from './MyButtonGroup';
 
 const ClassFilterBar = () => {
-	const workshops = getAllWorkshops();
+	const workshops = useSelector(getAllClasses);
 
 	const [filterName, setFilterName] = useState(null);
 	const [filterMonth, setFilterMonth] = useState(null);
 	const [filterAvailability, setFilterAvailability] = useState(null);
 
-	const [resetAll, setResetAll] = useState(false);
+	// const [resetAll, setResetAll] = useState(false);
 
 	const resetAllFilter = () => {
 		setFilterName(null);
 		setFilterMonth(null);
 		setFilterAvailability(null);
-		setResetAll(true);
+		// setResetAll(true);
 	};
 	const resetName = () => {
 		setFilterName(null);
@@ -31,23 +32,55 @@ const ClassFilterBar = () => {
 
 	const filterNameAfterClick = (event) => {
 		setFilterName(event.target.name);
-		setResetAll(false);
+		// setResetAll(false);
 	};
 	const filterMonthAfterClick = (event) => {
 		setFilterMonth(event.target.name);
-		setResetAll(false);
+		// setResetAll(false);
 	};
 	const filterAvailabilityAfterClick = (event) => {
 		setFilterAvailability(event.target.name);
-		setResetAll(false);
+		// setResetAll(false);
 	};
+
+	// const types = ['espresso', 'cupping', 'brewing', 'latte-art'];
+
+	// return (
+	// 	<>
+	// 		<MyButtonGroup2>
+	// 			{types.map((x) => {
+	// 				const isActive = filterName && filterName.toLowerCase() === x.toLowerCase();
+	// 				return (
+	// 				<button
+	// 					onClick={() => setFilterName(isActive ? null : filterName)}
+	// 					active={isActive}
+	// 				>
+	// 					{x}
+	// 				</button>
+	// 			)})};
+	// 		</MyButtonGroup2>
+	// 		{/* <MyButtonGroup2>
+	// 			{['november', 'december', 'january', 'february'].map((x) => (
+	// 				<button />
+	// 			))}
+	// 		</MyButtonGroup2>
+	// 		<MyButtonGroup2>
+	// 			{['espresso', 'cupping', 'brewing', 'latte-art'].map((x) => (
+	// 				<button />
+	// 			))}
+	// 		</MyButtonGroup2> */}
+	// 	</>
+	// );
 
 	return (
 		<>
 			<div className='class-filter-bar'>
 				<div className='filter-section'>
 					<h5>filters</h5>
-					<button onClick={() => resetAllFilter()} className='reset-filter-button'>
+					<button
+						onClick={() => resetAllFilter()}
+						className='reset-filter-button'
+					>
 						reset all
 					</button>
 				</div>
@@ -57,7 +90,7 @@ const ClassFilterBar = () => {
 						buttons={['espresso', 'cupping', 'brewing', 'latte-art']}
 						doSthAfterClick={filterNameAfterClick}
 						doResetAfterClick={resetName}
-						resetAll={resetAll}
+						// resetAll={() => setTheThing(null))}
 					/>
 				</div>
 				<div className='filter-section'>
@@ -66,7 +99,7 @@ const ClassFilterBar = () => {
 						buttons={['november', 'december', 'january', 'february']}
 						doSthAfterClick={filterMonthAfterClick}
 						doResetAfterClick={resetMonth}
-						resetAll={resetAll}
+						// resetAll={resetAll}
 					/>
 				</div>
 				<div className='filter-section'>
@@ -75,7 +108,7 @@ const ClassFilterBar = () => {
 						buttons={['1', '2', '3', '4']}
 						doSthAfterClick={filterAvailabilityAfterClick}
 						doResetAfterClick={resetAvailability}
-						resetAll={resetAll}
+						// resetAll={resetAll}
 					/>
 				</div>
 			</div>

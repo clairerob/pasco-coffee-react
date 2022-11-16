@@ -3,7 +3,7 @@ import strata from '../assets/roastery-logos/strata-logo.png';
 import panther from '../assets/roastery-logos/panther-logo.png';
 import hasbean from '../assets/roastery-logos/hasbean-logo.svg';
 
-const ROASTERIES = [
+export const ROASTERIES = [
     {
         id: 0,
         name: 'Oddly Correct',
@@ -38,10 +38,3 @@ const ROASTERIES = [
     },
 ];
 
-export const getAllRoasteries = () => {
-    return ROASTERIES;
-};
-
-export const getFeaturedRoasteries = () => {
-    return ROASTERIES.filter(roastery => roastery.featured);
-};

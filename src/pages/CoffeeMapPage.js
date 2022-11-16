@@ -2,7 +2,7 @@ import ReactTooltip from 'react-tooltip';
 import { useState } from 'react';
 import CoffeeMap from '../features/coffeemap/CoffeeMap';
 import { Container, Row, Col } from 'react-bootstrap';
-import RoastersList from '../features/coffeemap/RoastersList';
+import RoasteriesList from '../features/roasteries/RoasteriesList';
 
 const CoffeeMapPage = () => {
 	const [tooltipContent, setTooltipContent] = useState('');
@@ -50,7 +50,7 @@ const CoffeeMapPage = () => {
 						</ReactTooltip>
 					</Col>
 				</Row>
-					<RoastersList />
+					<RoasteriesList />
 			</Container>
 		</div>
 	);

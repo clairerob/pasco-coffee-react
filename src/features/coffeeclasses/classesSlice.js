@@ -12,6 +12,6 @@ const classesSlice = createSlice({
 
 export const classesReducer = classesSlice.reducer;
 
-export const selectAllClasses = (state) => {
+export const getAllClasses = (state) => {
     return state.classes.classesArray;
-}
+};

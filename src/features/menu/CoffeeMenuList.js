@@ -1,9 +1,11 @@
 import CoffeeMenuItem from './CoffeeMenuItem';
-import { getCurrentCoffees } from '../../app/shared/COFFEES';
+import { getCurrentCoffees } from '../coffeemap/coffeesSlice';
 import { Col } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
 const CoffeeMenuList = () => {
-	const items = getCurrentCoffees();
+	const items = useSelector(getCurrentCoffees);
+	console.log(items);
 
 	return (
 		<>

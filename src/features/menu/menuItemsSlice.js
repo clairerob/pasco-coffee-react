@@ -16,10 +16,10 @@ export const menuItemsReducer = menuItemsSlice.reducer;
 //     return MENU_ITEMS;
 // };
 
-export const getFeaturedMenuItems = () => {
-    return MENU_ITEMS.filter(item => item.featured);
+export const getFeaturedMenuItems = (state) => {
+    return state.menuItems.menuItemsArray.filter((item) => item.featured);
 };
 
-export const getCurrentMenuItems = () => {
-    return MENU_ITEMS.filter(item => item.current);
+export const getCurrentMenuItems = (state) => {
+    return state.menuItems.menuItemsArray.filter((item) => item.current);
 };

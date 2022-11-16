@@ -13,11 +13,11 @@ const coffeesSlice = createSlice({
 export const coffeesReducer = coffeesSlice.reducer;
 
 export const getCurrentCoffees = (state) => {
-    return state.coffeesArray.filter(coffee => coffee.current);
+    return state.coffees.coffeesArray.filter(coffee => coffee.current);
 };
 
 export const getCurrentCoffeesByCountry = (countryName) => (state) => {
-    return state.COFFEES.filter(coffee => coffee.current && coffee.country === countryName);
+    return state.coffees.coffeesArray.filter(coffee => coffee.current && coffee.country === countryName);
 };
 
 // export const getCurrentCoffeeCountries = () => {

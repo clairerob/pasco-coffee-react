@@ -4,7 +4,6 @@ import { validateContactForm } from '../utils/validateContactForm';
 
 const ContactForm = () => {
 	const handleSubmit = (values, { resetForm }) => {
-
 		console.log('form values in JSON:', JSON.stringify(values));
 		resetForm();
 	};
@@ -20,7 +19,7 @@ const ContactForm = () => {
 				onSubmit={handleSubmit}
 				validate={validateContactForm}
 			>
-				<Form className='contact-form'>
+				<Form className='contact-form' name='contact-form'>
 						<Row className='justify-content-center'>
 							<Col xs='10' md='12' lg='10' xl='8'>
 								<label htmlFor='name'>name</label>
