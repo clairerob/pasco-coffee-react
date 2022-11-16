@@ -77,16 +77,16 @@ const Footer = () => {
 						</p>
 						<div className='d-md-none'>
 							<a
-								class='btn btn-social-icon btn-instagram'
+								className='btn btn-social-icon btn-instagram'
 								href='https://www.instagram.com/pascocoffeebar'
 							>
-								<i class='fa fa-instagram'></i>
+								<i className='fa fa-instagram'></i>
 							</a>
 							<a
-								class='btn btn-social-icon btn-facebook'
+								className='btn btn-social-icon btn-facebook'
 								href='http://facebook.com/'
 							>
-								<i class='fa fa-facebook'></i>
+								<i className='fa fa-facebook'></i>
 							</a>
 						</div>
 					</Col>

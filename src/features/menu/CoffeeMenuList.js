@@ -5,14 +5,13 @@ import { useSelector } from 'react-redux';
 
 const CoffeeMenuList = () => {
 	const items = useSelector(getCurrentCoffees);
-	console.log(items);
 
 	return (
 		<>
 			{items.map((item) => {
 				return (
-					<Col sm='6' key={item.id} className='text-center' >
-						<CoffeeMenuItem item={item}/>
+					<Col sm='6' key={item.id} className='text-center'>
+						<CoffeeMenuItem item={item} />
 					</Col>
 				);
 			})}

@@ -17,14 +17,12 @@ const CoffeeInfo = () => {
 				<p className='info-text'>
 					we work with roasters from around the US to bring you the very best we
 					can find! learn more about the roasters and beans currently available{' '}
-					<div>
-						<Link to='/coffee-map'>
-							<Button className='btn-dark'>
-							here
-							</Button>
-						</Link>
-					</div>
 				</p>
+				<div>
+					<Link to='/coffee-map'>
+						<Button className='btn-dark'>here</Button>
+					</Link>
+				</div>
 			</Col>
 		</Row>
 	);

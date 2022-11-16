@@ -3,9 +3,9 @@ import { memo } from 'react';
 import mymap from '../../app/assets/mymap.json';
 import { getCurrentCoffeesByCountry } from '../../app/shared/COFFEES';
 import CoffeeTooltip from './CoffeeTooltip';
+import { useNavigate } from 'react-router-dom';
 
-const geoUrl = 
-mymap;
+const geoUrl = mymap;
 
 const worldStyles = {
 	default: {
@@ -47,6 +47,15 @@ const coffeeCountryStyles = {
 };
 
 const CoffeeMap = ({ setTooltipContent }) => {
+	const navigate = useNavigate();
+
+	const handleClick = (e) => {
+		if (e.detail === 2) {
+			console.log(e.detail);
+			navigate('/menu');
+		}
+	};
+
 	return (
 		<div data-tip=''>
 			<ComposableMap projectionConfig={{ scale: 220, center: [23, 0] }}>
@@ -73,6 +82,11 @@ const CoffeeMap = ({ setTooltipContent }) => {
 								}}
 								onMouseLeave={() => {
 									setTooltipContent('');
+								}}
+								onClick={(e) => {
+									if (getCurrentCoffeesByCountry(geo.properties.name).length) {
+										handleClick(e);
+									}
 								}}
 							/>
 						))

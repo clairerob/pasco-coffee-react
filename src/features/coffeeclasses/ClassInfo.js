@@ -16,14 +16,12 @@ const ClassInfo = () => {
 				<h1>classes</h1>
 				<p className='info-text'>
 					join us for cupping sessions, home brewing and espresso classes{' '}
-					<div>
-						<Link to='/coffee-classes'>
-						<Button className='btn-dark'>
-							book now
-							</Button>
-						</Link>
-					</div>
 				</p>
+				<div>
+					<Link to='/coffee-classes'>
+						<Button className='btn-dark'>book now</Button>
+					</Link>
+				</div>
 			</Col>
 		</Row>
 	);

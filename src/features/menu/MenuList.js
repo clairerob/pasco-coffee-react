@@ -6,14 +6,12 @@ import { useSelector } from 'react-redux';
 const MenuList = () => {
 	const items = useSelector(getCurrentMenuItems);
 
-	console.log(items);
-
 	return (
 		<>
-            {items.map((item) => {
+			{items.map((item) => {
 				return (
-					<Col sm='6' key={item.id} className='text-center' >
-						<MenuItem item={item}/>
+					<Col sm='6' key={item.id} className='text-center'>
+						<MenuItem item={item} />
 					</Col>
 				);
 			})}
