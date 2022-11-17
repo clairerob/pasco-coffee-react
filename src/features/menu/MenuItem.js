@@ -1,3 +1,5 @@
+import { formatCurrency } from '../../utils/formatCurrency';
+
 const MenuItem = ({ item }) => {
 	const { drink, description, price } = item;
 	return (
@@ -6,7 +8,7 @@ const MenuItem = ({ item }) => {
 			<p>
 				<small>{description.toLowerCase()}</small>
 				<br />
-				<strong>${price.toPrecision(3)}</strong>
+				<strong>{formatCurrency(price)}</strong>
 			</p>
 		</>
 	);
