@@ -9,14 +9,14 @@ const drinks = {
 			type: 'string',
 			validation: (Rule) => Rule.required(),
 		},
-		{
-			name: 'category',
-			title: 'Category',
-			type: 'reference',
-			to: {
-				type: 'category',
-			},
-		},
+		// {
+		// 	name: 'category',
+		// 	title: 'Category',
+		// 	type: 'reference',
+		// 	to: {
+		// 		type: 'category',
+		// 	},
+		// },
 		{
 			title: 'Description',
 			name: 'drinkDescription',
@@ -47,6 +47,6 @@ const drinks = {
 			validation: (Rule) => Rule.required(),
 		},
 	],
-};
+}
 
-export default drinks;
+export default drinks
