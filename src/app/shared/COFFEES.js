@@ -1,4 +1,4 @@
-const COFFEES = [
+export const COFFEES = [
     {
         id: 0,
         name: 'Good Girl: signature blend',

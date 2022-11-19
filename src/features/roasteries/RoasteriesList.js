@@ -1,8 +1,9 @@
-import { getAllRoasteries } from '../../app/shared/ROASTERIES';
+import { getAllRoasteries } from './roasteriesSlice';
+import { useSelector } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
 
 const RoastersList = () => {
-	const roasteries = getAllRoasteries();
+	const roasteries = useSelector(getAllRoasteries);
 	return (
 		<Row className='align-items-center my-5'>
 			{roasteries.map((roastery) => {

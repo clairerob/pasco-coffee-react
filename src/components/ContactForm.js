@@ -1,5 +1,5 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { Button, FormGroup, Label, Col } from 'reactstrap';
+import { ErrorMessage, Field, Formik, Form } from 'formik';
+import { Button, Col, Row } from 'react-bootstrap';
 import { validateContactForm } from '../utils/validateContactForm';
 
 const ContactForm = () => {
@@ -19,63 +19,73 @@ const ContactForm = () => {
 				onSubmit={handleSubmit}
 				validate={validateContactForm}
 			>
-				<Form>
-					<FormGroup row className='justify-content-center'>
-						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='name'>name</Label>
-							<Field
-								name='name'
-								placeholder='name'
-								className='form-control'
-							></Field>
-							<ErrorMessage name='name'>
-								{(msg) => <p className='text-danger'>{msg}</p>}
-							</ErrorMessage>
+				<Form className='contact-form' name='contact-form'>
+						<Row className='justify-content-center'>
+							<Col xs='10' md='12' lg='10' xl='8'>
+								<label htmlFor='name'>name</label>
+								<Field
+									name='name'
+									placeholder='name'
+									className='form-control'
+								></Field>
+								<ErrorMessage name='name'>
+									{(msg) => <p className='text-danger'>{msg}</p>}
+								</ErrorMessage>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xs='10' md='12' lg='10' xl='8'>
+								<label htmlFor='email'>email</label>
+								<Field
+									name='email'
+									placeholder='email'
+									type='email'
+									className='form-control'
+								></Field>
+								<ErrorMessage name='email'>
+									{(msg) => <p className='text-danger'>{msg}</p>}
+								</ErrorMessage>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col
+								xs={{ offset: 1 }}
+								md={{ offset: 0 }}
+								lg={{ offset: 1 }}
+								xl={{ offset: 2 }}
+								className='mt-2'
+							>
+								<label check='true'>
+									<Field
+										name='agree'
+										type='checkbox'
+										className='form-check-input text-info'
+									/>{' '}
+									may we contact you?
+								</label>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xs='10' md='12' lg='10' xl='8'>
+								<label htmlFor='comment'>what's up?</label>
+								<Field
+									name='comment'
+									as='textarea'
+									rows='4'
+									className='form-control'
+								></Field>
+								<ErrorMessage name='comment'>
+									{(msg) => <p className='text-danger'>{msg}</p>}
+								</ErrorMessage>
+							</Col>
+						</Row>
+					<Row className='justify-content-center'>
+						<Col className='mt-4' xs='10' md='12' lg='10' xl='8'>
+							<Button type='submit' className='contact-submit-btn btn-warning'>
+								submit
+							</Button>
 						</Col>
-					</FormGroup>
-					<FormGroup row className='justify-content-center'>
-						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='email'>email</Label>
-							<Field
-								name='email'
-								placeholder='email'
-								type='email'
-								className='form-control'
-							></Field>
-							<ErrorMessage name='email'>
-								{(msg) => <p className='text-danger'>{msg}</p>}
-							</ErrorMessage>
-						</Col>
-					</FormGroup>
-					<FormGroup row className='justify-content-center'>
-						<Col >
-							<Label check xs={{offset:1}} md={{offset:0}} lg={{offset:1}} xl={{offset:2}}>
-							<Field
-								name='agree'
-								type='checkbox'
-								className='form-check-input text-info'
-							/>
-							{' '}may we contact you?
-							</Label>
-						</Col>
-					</FormGroup>
-					<FormGroup row className='justify-content-center'>
-						<Col xs='10' md='12' lg='10' xl='8'>
-							<Label htmlFor='comment'>what's up?</Label>
-							<Field
-								name='comment'
-								as='textarea'
-								rows='4'
-								className='form-control'
-							></Field>
-							<ErrorMessage name='comment'>
-								{(msg) => <p className='text-danger'>{msg}</p>}
-							</ErrorMessage>
-						</Col>
-					</FormGroup>
-					<Col className='text-center'>
-					<Button type='submit' className='btn-light contact-submit-btn'>submit</Button>
-					</Col>
+					</Row>
 				</Form>
 			</Formik>
 		</>

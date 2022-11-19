@@ -1,16 +1,17 @@
 import CoffeeMenuItem from './CoffeeMenuItem';
-import { getCurrentCoffees } from '../../app/shared/COFFEES';
+import { getCurrentCoffees } from '../coffeemap/coffeesSlice';
 import { Col } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
 const CoffeeMenuList = () => {
-	const items = getCurrentCoffees();
+	const items = useSelector(getCurrentCoffees);
 
 	return (
 		<>
 			{items.map((item) => {
 				return (
-					<Col sm='6' key={item.id} className='text-center' >
-						<CoffeeMenuItem item={item}/>
+					<Col sm='6' key={item.id} className='text-center'>
+						<CoffeeMenuItem item={item} />
 					</Col>
 				);
 			})}

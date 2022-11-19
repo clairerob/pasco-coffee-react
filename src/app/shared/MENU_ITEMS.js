@@ -5,7 +5,7 @@ import v60 from '../assets/v60.jpg';
 import lavender from '../assets/lavender-latte.webp';
 import tonic from '../assets/tonic-pour.jpg';
 
-const MENU_ITEMS = [
+export const MENU_ITEMS = [
     {
         id: 1,
         drink: 'Cold Brew',
@@ -75,14 +75,14 @@ const MENU_ITEMS = [
     },
 ];
 
-export const getAllMenuItems = () => {
-    return MENU_ITEMS;
-};
+// export const getAllMenuItems = () => {
+//     return MENU_ITEMS;
+// };
 
-export const getFeaturedMenuItems = () => {
-    return MENU_ITEMS.filter(item => item.featured);
-};
+// export const getFeaturedMenuItems = () => {
+//     return MENU_ITEMS.filter(item => item.featured);
+// };
 
-export const getCurrentMenuItems = () => {
-    return MENU_ITEMS.filter(item => item.current);
-};
+// export const getCurrentMenuItems = () => {
+//     return MENU_ITEMS.filter(item => item.current);
+// };

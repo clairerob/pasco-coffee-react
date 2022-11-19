@@ -12,8 +12,8 @@ export const validateContactForm = (values) => {
     const emailReg = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,63}$/i;
     if (!values.email) {
         errors.email = 'required';
-    } else if (values.email.length > 254 && !emailReg.test(values.email)) {
-        errors.email = 'invalid email address';
+    } else if (values.email.length > 254 || !emailReg.test(values.email)) {
+        errors.email = 'please enter valid email address';
     }
 
     if (!values.comment) {

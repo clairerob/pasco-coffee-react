@@ -3,13 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const ContactPage = () => {
 	return (
-		<Container className='mt-5 page-overlay'>
+		<Container className='mt-5 page-overlay justify-content-center'>
 			<h1 className='text-center'>get in touch!</h1>
-			<Row className='justify-content-around'>
+			<Row className='justify-content-around mt-4'>
 				<Col xs='12' md='6' className='mt-2'>
-					<ContactForm />
+					<ContactForm/>
 				</Col>
-				<Col className='mt-5 contact-page-location-info pt-4 pb-3 px-4'>
+				<Col className='mt-5 contact-page-location-info pt-4 pb-3 px-4 mr-2'>
 						<Row>
 							<h3>find us at:</h3>
 							<Col className='mt-3'>
@@ -40,16 +40,16 @@ const ContactPage = () => {
 								</p>
 								<div>
 									<a
-										class='btn btn-social-icon btn-instagram'
+										className='btn btn-social-icon btn-instagram'
 										href='http://instagram.com/'
 									>
-										<i class='fa fa-instagram'></i>
+										<i className='fa fa-instagram'></i>
 									</a>
 									<a
-										class='btn btn-social-icon btn-facebook'
+										className='btn btn-social-icon btn-facebook'
 										href='http://facebook.com/'
 									>
-										<i class='fa fa-facebook'></i>
+										<i className='fa fa-facebook'></i>
 									</a>
 								</div>
 							</Col>

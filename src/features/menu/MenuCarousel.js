@@ -1,8 +1,9 @@
 import { Row, Col } from 'react-bootstrap';
-import { getFeaturedMenuItems } from '../../app/shared/MENU_ITEMS';
+import { getFeaturedMenuItems } from './menuItemsSlice';
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const MenuCarousel = () => {
 	const [index, setIndex] = useState(0);
@@ -11,12 +12,16 @@ const MenuCarousel = () => {
 		setIndex(selectedIndex);
 	};
 
-	const items = getFeaturedMenuItems();
+	const items = useSelector(getFeaturedMenuItems);
 
 	return (
 		<Row className='row-content justify-content-center'>
 			<Col md='9'>
-				<Carousel activeIndex={index} onSelect={handleSelect}>
+				<Carousel
+					className='menu-carousel'
+					activeIndex={index}
+					onSelect={handleSelect}
+				>
 					{items.map((item) => {
 						return (
 							<Carousel.Item key={item.id}>
@@ -25,7 +30,7 @@ const MenuCarousel = () => {
 									src={item.image}
 									alt={item.drink}
 								/>
-								<Carousel.Caption>
+								<Carousel.Caption className='menu-carousel-captions'>
 									<Link to='/menu' className='carousel-links'>
 										<h3>{item.drink}</h3>
 										<p className='d-none d-md-block'>{item.description}</p>

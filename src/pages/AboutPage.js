@@ -15,12 +15,12 @@ const AboutPage = () => {
 				<Row className='justify-content-center'>
 					<Col xs='8' md='4' className='py-3'>
 						<Link to='/coffee'>
-							<Button className='aboutpage-btn btn-light'>learn more about coffee</Button>
+							<Button className='aboutpage-btn btn-warning'>learn more about coffee</Button>
 						</Link>
 					</Col>
 					<Col xs='8' md='4' className='py-3'>
 						<Link to='/menu'>
-							<Button className='aboutpage-btn btn-light'>see the menu</Button>
+							<Button className='aboutpage-btn btn-warning'>see the menu</Button>
 						</Link>
 					</Col>
 				</Row>

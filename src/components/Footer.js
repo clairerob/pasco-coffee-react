@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
 
@@ -11,7 +11,7 @@ const Footer = () => {
 						<div>
 							<a
 								className='btn btn-social-icon btn-instagram'
-								href='http://instagram.com/'
+								href='https://www.instagram.com/pascocoffeebar'
 							>
 								<i className='fa fa-instagram'></i>
 							</a>
@@ -47,23 +47,27 @@ const Footer = () => {
 							</li>
 						</ul>
 
-						<a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-light mx-auto my-5 px-5 btn-lg'>order now</Button></a>
+						<a href='https://pasco-farms.square.site/pasco-coffee-bar'>
+							<Button className='btn-dark mx-auto my-5 px-5 btn-lg'>
+								order online now
+							</Button>
+						</a>
 					</Col>
 					<Col>
 						<h5>location</h5>
-					
+
 						<p>
-						<a href='https://goo.gl/maps/BXTJCXGxS4BWQzn58'>
-							107 s broad street unit b
-							<br />
-							thomasville
-							<br />
-							ga
-							<br />
-							31792
-							<br />
-							(at rear of relish)
-						</a>
+							<a href='https://goo.gl/maps/BXTJCXGxS4BWQzn58'>
+								107 s broad street unit b
+								<br />
+								thomasville
+								<br />
+								ga
+								<br />
+								31792
+								<br />
+								(at rear of relish)
+							</a>
 						</p>
 						<h5>hours</h5>
 						<p>
@@ -73,16 +77,16 @@ const Footer = () => {
 						</p>
 						<div className='d-md-none'>
 							<a
-								class='btn btn-social-icon btn-instagram'
-								href='http://instagram.com/'
+								className='btn btn-social-icon btn-instagram'
+								href='https://www.instagram.com/pascocoffeebar'
 							>
-								<i class='fa fa-instagram'></i>
+								<i className='fa fa-instagram'></i>
 							</a>
 							<a
-								class='btn btn-social-icon btn-facebook'
+								className='btn btn-social-icon btn-facebook'
 								href='http://facebook.com/'
 							>
-								<i class='fa fa-facebook'></i>
+								<i className='fa fa-facebook'></i>
 							</a>
 						</div>
 					</Col>

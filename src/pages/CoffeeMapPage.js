@@ -2,7 +2,7 @@ import ReactTooltip from 'react-tooltip';
 import { useState } from 'react';
 import CoffeeMap from '../features/coffeemap/CoffeeMap';
 import { Container, Row, Col } from 'react-bootstrap';
-import RoastersList from '../features/coffeemap/RoastersList';
+import RoasteriesList from '../features/roasteries/RoasteriesList';
 
 const CoffeeMapPage = () => {
 	const [tooltipContent, setTooltipContent] = useState('');
@@ -18,17 +18,23 @@ const CoffeeMapPage = () => {
 							the great variety in coffee we serve comes partly from the
 							preparation, partly from the roast, and in huge part from the
 							growing process.
-							<hr className='coffee-map-info' />
+						</p>
+						<hr className='coffee-map-info' />
+						<p>
 							location and varietal are hugely important to the final cup, as
 							well as the care taken in growing and processing those beans - we
 							serve our single origin brewed coffees to highlight the distinct
 							elements of each one.
-							<hr className='coffee-map-info' />
+						</p>
+						<hr className='coffee-map-info' />
+						<p>
 							we work with roasteries that take care to select the very best,
 							specialty-grade coffees, and have created this interactive map to
 							allow you to explore the different tasting notes and styles of
 							coffee each region cultivates.
-							<hr className='coffee-map-info' />
+						</p>
+						<hr className='coffee-map-info' />
+						<p>
 							you'll notice, for example, that kenya often produces very
 							fruit-forward coffees, or that brazil tends towards chocolatey,
 							nutty notes. this can be a great way to help you find something
@@ -50,7 +56,7 @@ const CoffeeMapPage = () => {
 						</ReactTooltip>
 					</Col>
 				</Row>
-					<RoastersList />
+				<RoasteriesList />
 			</Container>
 		</div>
 	);

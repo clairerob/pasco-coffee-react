@@ -17,10 +17,15 @@ const WORKSHOPIMAGES = {
     latte_art: latteArt
 };
 
-const WORKSHOPS = [
+// export const FEATURED_WORKSHOP = "brewing";
+
+// const getFeaturedThing = () =>
+//     WORKSHOPS.find(x => x.name === FEATURED_WORKSHOP);
+
+export const WORKSHOPS = [
     {
         id: 0,
-        date: '11/01/2022',
+        date: '11/01/2022', // use ISO whatever: YYYY-MM-DD(...)Z
         month: 'november',
         name: 'cupping',
         spaces: 2,
@@ -91,20 +96,20 @@ const WORKSHOPS = [
 ];
 
 
-export const getAllWorkshops = () => {
-    return WORKSHOPS
-};
+// export const getAllWorkshops = () => (
+//     WORKSHOPS;
+// );
 
-export const GetFeaturededWorkshops = () => {
-    return WORKSHOPS.find(workshop => workshop.featured)
-};
+// export const GetFeaturededWorkshops = () => {
+//     return WORKSHOPS.find(workshop => workshop.featured)
+// };
 
-export const GetMonthWorkshops = (month) => {
-    return WORKSHOPS.filter(workshop => workshop.date
-        //google how best to parse dates
-        );
-};
+// export const GetMonthWorkshops = (month) => {
+//     return WORKSHOPS.filter(workshop => workshop.date
+//         //google how best to parse dates (EM: use date-fns)
+//         );
+// };
 
-export const GetWorkshopDescription = (name) => {
-    return WORKSHOPDESCRIPTIONS[name];
-};
+// export const GetWorkshopDescription = (name) => {
+//     return WORKSHOPDESCRIPTIONS[name];
+// };

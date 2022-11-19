@@ -1,4 +1,4 @@
-import { Button, Card, Modal } from 'react-bootstrap';
+import { Card, Modal, Button } from 'react-bootstrap';
 import { useState } from 'react';
 
 const ClassCard = ({ workshop }) => {
@@ -10,7 +10,6 @@ const ClassCard = ({ workshop }) => {
 	const handleOpen = () => setShow(true);
 
 	// const doLog = () => console.log('i click');
-
 	return (
 		<>
 			<Card
@@ -45,15 +44,26 @@ const ClassCard = ({ workshop }) => {
 				</Card.Footer>
 			</Card>
 
-			<Modal show={show} onHide={handleClose} centered>
+			<Modal show={show} onHide={handleClose} centered className='text-center'>
 				<Modal.Header closeButton>
-					<Modal.Title>book class</Modal.Title>
+					<Modal.Title>
+						{name} class: {date}
+					</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					this one: {name}, {date}? how many people? payment thing from here
-					<Button onClick={handleClose}>close</Button>
+					form probably with formik to connect to stripe payment page but not
+					building until I look at stripe docs
 				</Modal.Body>
-				<Modal.Footer></Modal.Footer>
+				<Modal.Footer>
+					<div>
+						<Button onClick={handleClose}>close</Button>
+					</div>
+					<div>
+						<Button onClick={handleClose}>
+							confirm and continue to payment bit
+						</Button>
+					</div>
+				</Modal.Footer>
 			</Modal>
 		</>
 	);

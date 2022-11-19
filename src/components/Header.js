@@ -46,20 +46,14 @@ const Header = () => {
 						// onClick={() => setMenuOpen(false)}
 						className='navlinks'
 					>
-						<Nav.Link eventKey='1'>
-							<NavLink className='nav-link' to='/'>
-								home
-							</NavLink>
+						<Nav.Link eventKey='1' as={NavLink} to='/'>
+							home
 						</Nav.Link>
-						<Nav.Link eventKey='2'>
-							<NavLink className='nav-link' to='/menu'>
-								menu
-							</NavLink>
+						<Nav.Link eventKey='2' as={NavLink} to='/menu'>
+							menu
 						</Nav.Link>
-						<Nav.Link eventKey='3'>
-							<NavLink className='nav-link' to='/about'>
-								about
-							</NavLink>
+						<Nav.Link eventKey='3' as={NavLink} to='/about'>
+							about
 						</Nav.Link>
 						{/* <NavItem>
 							<Dropdown onClick={() => setDropdownOpen(!dropdownOpen)}>
@@ -75,15 +69,11 @@ const Header = () => {
 							</Dropdown>
 						</NavItem> */}
 
-						<Nav.Link eventKey='4'>
-							<NavLink className='nav-link' to='/coffee'>
-								the coffee
-							</NavLink>
+						<Nav.Link eventKey='4' as={NavLink} to='/coffee'>
+							the coffee
 						</Nav.Link>
-						<Nav.Link eventKey='5'>
-							<NavLink className='nav-link' to='/contact'>
-								contact
-							</NavLink>
+						<Nav.Link eventKey='5' as={NavLink} to='/contact'>
+							contact
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

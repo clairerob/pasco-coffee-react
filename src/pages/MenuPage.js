@@ -21,7 +21,7 @@ const MenuPage = () => {
             </Row>
             <Row className='text-center pt-5 px-3 px-md-5'>
                 <Col>
-                <a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-light btn-lg px-5'><h2>order online here</h2></Button></a>
+                <a href='https://pasco-farms.square.site/pasco-coffee-bar'><Button className='btn-dark btn-lg px-5'><h2>order online now</h2></Button></a>
                 </Col>
             </Row>
         </Container>
