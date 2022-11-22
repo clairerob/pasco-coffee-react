@@ -107,6 +107,20 @@ h2 {
 .info-text {
 	line-height: 1.8;
 }
+.info-link-btn {
+	width: 10rem;
+	background: var(--black);
+	border: 3px solid var(--black);
+	border-radius: 15px;
+	color: var(--off-white-color);
+	padding: 10px;
+	font-weight: 600;
+	font-size: larger;
+}
+.info-link-btn:hover {
+	background: transparent;
+	color: var(--black);
+}
 
 .menu-carousel .carousel-item {
 	height: 500px;
@@ -148,17 +162,16 @@ h2 {
 .aboutpage-btn {
 	width: 100%;
 	height: 6rem;
-	background: var(--dark-gold-color);
-	border: 5px solid var(--dark-gold-color);
+	background: var(--light-gold-color);
+	border: 5px solid var(--light-gold-color);
 	border-radius: 15px;
-	color: var(--off-white-color);
+	color: var(--black);
 	padding: 10px;
 	font-weight: 600;
 	font-size: x-large;
 }
 
 .aboutpage-btn:hover {
-	color: var(--dark-gold-color);
 	background: transparent;
 }
 

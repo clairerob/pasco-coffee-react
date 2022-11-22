@@ -1,7 +1,7 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import v60 from '../app/assets/v60.jpg';
-import latte from '../app/assets/latte-pour.jpg';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap'
+import v60 from '../app/assets/v60.jpg'
+import latte from '../app/assets/latte-pour.jpg'
+import { Link } from 'react-router-dom'
 
 const TheCoffeePage = () => {
 	return (
@@ -16,28 +16,24 @@ const TheCoffeePage = () => {
 			</Row>
 			<Row>
 				<Col>
-                <Row className='mx-3 my-5'>
-			<Col xs='12'>
-				<img
-					className='ml-3 img-fluid class-info-img'
-					alt='barista'
-					src={latte}
-				/>
-			</Col>
-			<Col className='align-self-center mt-3'>
-				<h1>classes</h1>
-				<p className='info-text'>
-					join us for cupping sessions, home brewing and espresso classes{' '}
-					<div>
-						<Link to='/coffee-classes'>
-						<Button className='btn-dark'>
-							book now
-							</Button>
-						</Link>
-					</div>
-				</p>
-			</Col>
-		</Row>
+					<Row className='mx-3 my-5'>
+						<Col xs='12'>
+							<img
+								className='ml-3 img-fluid class-info-img'
+								alt='barista'
+								src={latte}
+							/>
+						</Col>
+						<Col className='align-self-center mt-3'>
+							<h1>classes</h1>
+							<p className='info-text'>
+								join us for cupping sessions, home brewing and espresso classes{' '}
+							</p>
+							<Link to='/coffee-classes'>
+								<button className='info-link-btn'>book now</button>
+							</Link>
+						</Col>
+					</Row>
 				</Col>
 				<Col>
 					<Row className='mx-3 my-5'>
@@ -55,15 +51,15 @@ const TheCoffeePage = () => {
 								best we can find! learn more about the roasters and beans
 								currently available{' '}
 							</p>
-									<Link to='/coffee-map'>
-										<Button className='btn-dark'>here</Button>
-									</Link>
+							<Link to='/coffee-map'>
+								<button className='info-link-btn'>here</button>
+							</Link>
 						</Col>
 					</Row>
 				</Col>
 			</Row>
 		</Container>
-	);
-};
+	)
+}
 
-export default TheCoffeePage;
+export default TheCoffeePage
