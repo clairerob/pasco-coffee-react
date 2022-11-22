@@ -28,15 +28,16 @@ const classes = {
 			type: 'number',
 			validation: (Rule) => Rule.required().positive().max('4'),
 		},
-		// {
-		// 	title: 'Type',
-		// 	name: 'type',
-		// 	type: 'reference',
-		// 	to: {
-		// 		type: 'classType',
-		// 	},
-		// 	validation: (Rule) => Rule.required(),
-		// },
+		{
+			title: 'Type',
+			name: 'type',
+			type: 'reference',
+			to: [
+				{
+					type: 'classType',
+				},
+			],
+		},
 	],
 }
 

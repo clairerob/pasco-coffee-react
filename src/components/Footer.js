@@ -1,6 +1,7 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import ContactForm from './ContactForm';
+import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import ContactForm from './ContactForm'
+import { SocialIcon } from 'react-social-icons'
 
 const Footer = () => {
 	return (
@@ -9,18 +10,17 @@ const Footer = () => {
 				<Row className='pb-3'>
 					<Col className='d-none d-md-block'>
 						<div>
-							<a
-								className='btn btn-social-icon btn-instagram'
-								href='https://www.instagram.com/pascocoffeebar'
-							>
-								<i className='fa fa-instagram'></i>
-							</a>
-							<a
-								className='btn btn-social-icon btn-facebook'
-								href='http://facebook.com/'
-							>
-								<i className='fa fa-facebook'></i>
-							</a>
+							<SocialIcon
+								fgColor='#fdfdfd'
+								bgColor='#f55142'
+								url='https://www.instagram.com/pascocoffeebar'
+							/>
+							<SocialIcon
+								fgColor='#fdfdfd'
+								bgColor='#3b7ae6'
+								className='mx-3'
+								url='http://facebook.com/'
+							/>
 						</div>
 
 						<ul className='list-unstyled mt-4'>
@@ -48,9 +48,9 @@ const Footer = () => {
 						</ul>
 
 						<a href='https://pasco-farms.square.site/pasco-coffee-bar'>
-							<Button className='btn-dark mx-auto my-5 px-5 btn-lg'>
+							<button className='mx-auto my-3 px-5 order-btn'>
 								order online now
-							</Button>
+							</button>
 						</a>
 					</Col>
 					<Col>
@@ -76,18 +76,17 @@ const Footer = () => {
 							sat : 9am - 5pm
 						</p>
 						<div className='d-md-none'>
-							<a
-								className='btn btn-social-icon btn-instagram'
-								href='https://www.instagram.com/pascocoffeebar'
-							>
-								<i className='fa fa-instagram'></i>
-							</a>
-							<a
-								className='btn btn-social-icon btn-facebook'
-								href='http://facebook.com/'
-							>
-								<i className='fa fa-facebook'></i>
-							</a>
+							<SocialIcon
+								fgColor='#fdfdfd'
+								bgColor='#f55142'
+								className='mx-3'
+								url='https://www.instagram.com/pascocoffeebar'
+							/>
+							<SocialIcon
+								fgColor='#fdfdfd'
+								bgColor='#3b7ae6'
+								url='http://facebook.com/'
+							/>
 						</div>
 					</Col>
 					<Col className='d-none d-sm-block'>
@@ -96,7 +95,7 @@ const Footer = () => {
 				</Row>
 			</Container>
 		</footer>
-	);
-};
+	)
+}
 
-export default Footer;
+export default Footer

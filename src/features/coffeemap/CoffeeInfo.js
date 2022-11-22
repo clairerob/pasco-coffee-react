@@ -1,6 +1,6 @@
-import v60 from '../../app/assets/v60.jpg';
-import { Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import v60 from '../../app/assets/v60.jpg'
+import { Row, Col, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const CoffeeInfo = () => {
 	return (
@@ -25,7 +25,7 @@ const CoffeeInfo = () => {
 				</div>
 			</Col>
 		</Row>
-	);
-};
+	)
+}
 
-export default CoffeeInfo;
+export default CoffeeInfo

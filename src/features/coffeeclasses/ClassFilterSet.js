@@ -1,25 +1,25 @@
-import { Row, Col } from 'react-bootstrap';
-import { useState } from 'react';
-import { getAllClasses } from './classesSlice';
-import { useSelector } from 'react-redux';
-import ClassCard from './ClassCard';
+import { Row, Col } from 'react-bootstrap'
+import { useState } from 'react'
+import { getAllClasses } from './classesSlice'
+import { useSelector } from 'react-redux'
+import ClassCard from './ClassCard'
 
-const ClassFilterBar = () => {
-	const workshops = useSelector(getAllClasses);
+const ClassFilterSet = () => {
+	const workshops = useSelector(getAllClasses)
 
-	const [filterType, setFilterType] = useState(null);
-	const [filterMonth, setFilterMonth] = useState(null);
-	const [filterAvailability, setFilterAvailability] = useState(null);
+	const [filterType, setFilterType] = useState(null)
+	const [filterMonth, setFilterMonth] = useState(null)
+	const [filterAvailability, setFilterAvailability] = useState(null)
 
 	const resetAllFilter = () => {
-		setFilterType(null);
-		setFilterMonth(null);
-		setFilterAvailability(null);
-	};
+		setFilterType(null)
+		setFilterMonth(null)
+		setFilterAvailability(null)
+	}
 
-	const types = ['espresso', 'cupping', 'brewing', 'latte-art'];
-	const months = ['november', 'december', 'january', 'february'];
-	const spaces = ['1', '2', '3', '4'];
+	const types = ['espresso', 'cupping', 'brewing', 'latte-art']
+	const months = ['november', 'december', 'january', 'february']
+	const spaces = ['1', '2', '3', '4']
 
 	return (
 		<>
@@ -40,7 +40,7 @@ const ClassFilterBar = () => {
 						{types.map((buttonLabel) => {
 							const isActive =
 								filterType &&
-								filterType.toLowerCase() === buttonLabel.toLowerCase();
+								filterType.toLowerCase() === buttonLabel.toLowerCase()
 							return (
 								<button
 									key={buttonLabel}
@@ -51,7 +51,7 @@ const ClassFilterBar = () => {
 								>
 									{buttonLabel}
 								</button>
-							);
+							)
 						})}
 						<div>
 							<button
@@ -70,7 +70,7 @@ const ClassFilterBar = () => {
 						{months.map((buttonLabel) => {
 							const isActive =
 								filterMonth &&
-								filterMonth.toLowerCase() === buttonLabel.toLowerCase();
+								filterMonth.toLowerCase() === buttonLabel.toLowerCase()
 							return (
 								<button
 									key={buttonLabel}
@@ -81,7 +81,7 @@ const ClassFilterBar = () => {
 								>
 									{buttonLabel}
 								</button>
-							);
+							)
 						})}
 						<div>
 							<button
@@ -99,7 +99,7 @@ const ClassFilterBar = () => {
 						{spaces.map((buttonLabel) => {
 							const isActive =
 								filterAvailability &&
-								filterAvailability.toLowerCase() === buttonLabel.toLowerCase();
+								filterAvailability.toLowerCase() === buttonLabel.toLowerCase()
 							return (
 								<button
 									key={buttonLabel}
@@ -110,7 +110,7 @@ const ClassFilterBar = () => {
 								>
 									{buttonLabel}
 								</button>
-							);
+							)
 						})}
 						<div>
 							<button
@@ -126,26 +126,26 @@ const ClassFilterBar = () => {
 
 			<Row className='justify-content-center mx-xl-5 mt-2 g-5'>
 				{workshops.map((workshop) => {
-					if (filterType !== null && filterType !== workshop.name) return null;
+					if (filterType !== null && filterType !== workshop.name) return null
 
 					if (
 						filterAvailability !== null &&
 						filterAvailability > workshop.spaces
 					)
-						return null;
+						return null
 
 					if (filterMonth !== null && filterMonth !== workshop.month)
-						return null;
+						return null
 
 					return (
 						<Col key={workshop.id} xs='10' sm='6' md='4' lg='3'>
 							<ClassCard workshop={workshop} />
 						</Col>
-					);
+					)
 				})}
 			</Row>
 		</>
-	);
-};
+	)
+}
 
-export default ClassFilterBar;
+export default ClassFilterSet

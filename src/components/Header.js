@@ -1,6 +1,6 @@
 // import { useState } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Nav, Navbar } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
 	// const [menuOpen, setMenuOpen] = useState(false);
@@ -33,19 +33,9 @@ const Header = () => {
 					<h1 className='brand-name p-3'>Pasco Coffee</h1>
 				</Navbar.Brand>
 
-				<Navbar.Toggle
-					aria-controls='basic-navbar-nav'
-					// onClick={() => setMenuOpen(!menuOpen)}
-				/>
-				<Navbar.Collapse
-					id='basic-navbar-nav'
-					// isOpen={menuOpen}
-					className='justify-content-end'
-				>
-					<Nav
-						// onClick={() => setMenuOpen(false)}
-						className='navlinks'
-					>
+				<Navbar.Toggle aria-controls='basic-navbar-nav' />
+				<Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
+					<Nav className='navlinks'>
 						<Nav.Link eventKey='1' as={NavLink} to='/'>
 							home
 						</Nav.Link>
@@ -59,12 +49,12 @@ const Header = () => {
 							<Dropdown onClick={() => setDropdownOpen(!dropdownOpen)}>
 								<DropdownToggle>the coffee</DropdownToggle>
 								<DropdownMenu>
-									<NavLink to='/coffee-classes'>
+									<Nav.Link as={NavLink} to='/coffee-classes'>
 										<DropdownItem>Link</DropdownItem>
-									</NavLink>
-									<NavLink to='/coffee-map'>
+									</Nav.Link>
+									<Nav.Link as={NavLink} to='/coffee-map'>
 										<DropdownItem>coffee</DropdownItem>
-									</NavLink>
+									</Nav.Link>
 								</DropdownMenu>
 							</Dropdown>
 						</NavItem> */}
@@ -79,7 +69,7 @@ const Header = () => {
 				</Navbar.Collapse>
 			</Navbar>
 		</div>
-	);
-};
+	)
+}
 
-export default Header;
+export default Header

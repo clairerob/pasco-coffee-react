@@ -1,6 +1,6 @@
 // import ClassList from '../features/coffeeclasses/ClassList';
 import { Container, Row, Col } from 'react-bootstrap';
-import ClassFilterBar from '../features/coffeeclasses/ClassFilterBar';
+import ClassFilterSet from '../features/coffeeclasses/ClassFilterSet';
 import { Link } from 'react-router-dom';
 
 const CoffeeClassesPage = () => {
@@ -21,8 +21,7 @@ const CoffeeClassesPage = () => {
 						</p>
 					</Col>
 				</Row>
-				<ClassFilterBar />
-				{/* <ClassList /> */}
+				<ClassFilterSet />
 			</Container>
 		</div>
 	);

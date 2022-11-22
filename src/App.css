@@ -41,7 +41,7 @@ nav {
 	background-color: var(--off-white-color);
 }
 .brand-name:hover,
-.navlink .nav-link:hover:focus {
+.nav-link:hover {
 	color: var(--dark-gold-color);
 }
 h2 {
@@ -63,15 +63,29 @@ h2 {
 }
 
 #shop-img {
-	z-index: -1;
+	z-index: 1;
+	position: relative;
 }
 #overlay {
-	background-color: #d3ced497;
+	background-color: #fdfdfdd2;
 	border-radius: 30px;
-	max-width: 750px;
+	width: 80%;
+	max-width: 650px;
 	color: var(--black);
-	top: 15%;
 	color: var(--dark-green-text-color);
+	margin-top: -20rem;
+	z-index: 10;
+	position: relative;
+}
+@media only screen and (min-width: 768px) {
+	#overlay {
+		margin-top: -400px;
+	}
+}
+@media only screen and (min-width: 1025px) {
+	#overlay {
+		margin-top: -600px;
+	}
 }
 #overlay a {
 	color: var(--dark-gold-color);
@@ -79,7 +93,7 @@ h2 {
 	font-size: 1.8em;
 }
 #overlay a:hover {
-	color: var(--off-white-color);
+	color: var(--black);
 }
 
 .coffee-map-info {
@@ -94,7 +108,6 @@ h2 {
 	line-height: 1.8;
 }
 
-/* may change with real imgs, media query for sizing */
 .menu-carousel .carousel-item {
 	height: 500px;
 }
@@ -119,20 +132,14 @@ h2 {
 	color: var(--dark-gold-color);
 }
 
-
-
 .mapPage {
 	background-color: var(--off-white-color);
 	padding: 5px;
 }
 
-
-
 .menupage-hr {
 	width: 80%;
 }
-
-
 
 .aboutpage-img {
 	border-radius: 20px;
@@ -140,14 +147,24 @@ h2 {
 }
 .aboutpage-btn {
 	width: 100%;
-	height: 3rem;
-	background-color: var(--dark-gold-color);
+	height: 6rem;
+	background: var(--dark-gold-color);
+	border: 5px solid var(--dark-gold-color);
+	border-radius: 15px;
+	color: var(--off-white-color);
+	padding: 10px;
+	font-weight: 600;
+	font-size: x-large;
 }
+
+.aboutpage-btn:hover {
+	color: var(--dark-gold-color);
+	background: transparent;
+}
+
 .aboutpage-container {
 	color: var(--dark-green-text-color);
 }
-
-
 
 .contact-page-location-link {
 	text-decoration: none;
@@ -157,16 +174,25 @@ h2 {
 	color: var(--off-white-color);
 }
 .contact-page-location-info {
-	background-color: #3b7ae6a2;
+	background-color: rgb(37, 118, 131, 0.85);
 	border-radius: 10px;
 }
 .contact-submit-btn {
 	width: 100%;
+	background: var(--light-gold-color);
+	border: 3px solid var(--light-gold-color);
+	border-radius: 15px;
+	color: var(--black);
+	padding: 10px;
+	font-weight: 600;
+	font-size: larger;
+}
+.contact-submit-btn:hover {
+	border: 3px solid var(--black);
 }
 .contact-form label {
 	padding: 5px 3px;
 }
-
 
 footer {
 	margin-top: 5rem;
@@ -184,8 +210,20 @@ footer {
 .site-footer i {
 	color: #eee;
 }
-.btn-social-icon {
-	margin: 0.5rem;
+.order-btn {
+	width: 100%;
+	background: var(--black);
+	border: 5px solid var(--black);
+	border-radius: 15px;
+	color: var(--off-white-color);
+	padding: 10px;
+	font-weight: 600;
+	font-size: x-large;
+}
+
+.order-btn:hover {
+	color: var(--dark-gold-color);
+	border: 5px solid var(--black);
 }
 
 .class-page-intro-text a {

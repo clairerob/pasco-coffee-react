@@ -1,19 +1,18 @@
-import { Card, Modal, Button } from 'react-bootstrap';
-import { useState } from 'react';
+import { Card, Modal, Button } from 'react-bootstrap'
+import { useState } from 'react'
 
 const ClassCard = ({ workshop }) => {
-	const { name, description, date, image } = workshop;
+	const { name, description, date, image } = workshop
 
-	const [show, setShow] = useState(false);
+	const [show, setShow] = useState(false)
 
-	const handleClose = () => setShow(false);
-	const handleOpen = () => setShow(true);
+	const handleClose = () => setShow(false)
+	const handleOpen = () => setShow(true)
 
-	// const doLog = () => console.log('i click');
 	return (
 		<>
 			<Card
-				className='coffee-class-card text-center border-light'
+				className='coffee-class-card text-center border-light h-100'
 				style={{ borderRadius: '20px' }}
 				onClick={handleOpen}
 			>
@@ -30,8 +29,8 @@ const ClassCard = ({ workshop }) => {
 					</Card.Title>
 				</Card.ImgOverlay>
 				<Card.Body>
-					<Card.Text>{description.toLowerCase()}</Card.Text>
 					<h4>{date}</h4>
+					<Card.Text>{description.toLowerCase()}</Card.Text>
 				</Card.Body>
 				<Card.Footer
 					style={{
@@ -66,7 +65,7 @@ const ClassCard = ({ workshop }) => {
 				</Modal.Footer>
 			</Modal>
 		</>
-	);
-};
+	)
+}
 
-export default ClassCard;
+export default ClassCard
