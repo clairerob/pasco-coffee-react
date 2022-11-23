@@ -10,7 +10,7 @@ const ContactPage = () => {
 				<Col xs='12' md='6' className='mt-2 mx-3'>
 					<ContactForm />
 				</Col>
-				<Col className='mt-5 contact-page-location-info pt-4 pb-3 px-4 mr-2'>
+				<Col className='mt-5 contact-page-location-info pt-4 pb-3 px-4'>
 					<Row>
 						<h3>find us at:</h3>
 						<Col className='mt-3'>
@@ -43,11 +43,13 @@ const ContactPage = () => {
 								<SocialIcon
 									fgColor='#fdfdfd'
 									bgColor='#f55142'
+									style={{ height: 33, width: 33 }}
 									url='https://www.instagram.com/pascocoffeebar'
 								/>
 								<SocialIcon
 									fgColor='#fdfdfd'
 									bgColor='#3b7ae6'
+									style={{ height: 35, width: 35 }}
 									className='mx-3'
 									url='http://facebook.com/'
 								/>

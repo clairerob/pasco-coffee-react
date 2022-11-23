@@ -1,10 +1,10 @@
-import sanityClient from '../client';
-import { useState, useEffect } from 'react';
+import sanityClient from '../client'
+import { useState, useEffect } from 'react'
 
-import Category from './Category';
+import Category from './Category'
 
 const Categories = () => {
-	const [categories, setCategories] = useState(null);
+	const [categories, setCategories] = useState(null)
 
 	useEffect(() => {
 		sanityClient
@@ -16,9 +16,12 @@ const Categories = () => {
             hexCode,
         }`
 			)
-			.then((data) => setCategories(data))
-			.catch(console.error);
-	}, []);
+			.then((data) => {
+				setCategories(data)
+				console.log(data)
+			})
+			.catch(console.error)
+	}, [])
 
 	return (
 		<div className=''>
@@ -33,7 +36,7 @@ const Categories = () => {
 					))}
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Categories;
+export default Categories

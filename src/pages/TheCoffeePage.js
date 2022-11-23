@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
-import v60 from '../app/assets/v60.jpg'
-import latte from '../app/assets/latte-pour.jpg'
+import v60 from '../app/assets/brewbar.jpg'
+import latte from '../app/assets/v60.jpg'
 import { Link } from 'react-router-dom'
 
 const TheCoffeePage = () => {

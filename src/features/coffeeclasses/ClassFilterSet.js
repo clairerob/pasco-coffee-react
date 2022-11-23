@@ -65,7 +65,7 @@ const ClassFilterSet = () => {
 				</div>
 
 				<div className='filter-section'>
-					<h5>class type</h5>
+					<h5>month</h5>
 					<div className='my-btn-group'>
 						{months.map((buttonLabel) => {
 							const isActive =
@@ -94,7 +94,7 @@ const ClassFilterSet = () => {
 					</div>
 				</div>
 				<div className='filter-section'>
-					<h5>class type</h5>
+					<h5>availability</h5>
 					<div className='my-btn-group'>
 						{spaces.map((buttonLabel) => {
 							const isActive =

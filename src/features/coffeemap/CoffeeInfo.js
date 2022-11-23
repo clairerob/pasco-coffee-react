@@ -12,7 +12,11 @@ const CoffeeInfo = () => {
 					alt='some coffee'
 				/>
 			</Col>
-			<Col sm='6' lg='4' className='align-self-center mt-3 text-center text-sm-left'>
+			<Col
+				sm='6'
+				lg='4'
+				className='align-self-center mt-3 text-center text-sm-left'
+			>
 				<h1>our coffee</h1>
 				<p className='info-text'>
 					we work with roasters from around the US to bring you the very best we
