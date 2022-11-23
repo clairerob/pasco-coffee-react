@@ -1,4 +1,4 @@
-import v60 from '../../app/assets/v60.jpg'
+import espresso from '../../app/assets/espresso.jpg'
 import { Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ const CoffeeInfo = () => {
 			<Col>
 				<img
 					className='ml-3 img-fluid coffee-info-img'
-					src={v60}
+					src={espresso}
 					alt='some coffee'
 				/>
 			</Col>

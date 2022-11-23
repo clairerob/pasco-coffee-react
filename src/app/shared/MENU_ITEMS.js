@@ -1,9 +1,9 @@
 import drink from '../assets/pumpkin-spice.jpg'
-import icedLatte from '../assets/iced-latte-pour.jpg'
+import latte from '../assets/latte.jpg'
 import lattepour from '../assets/latte-pour.jpg'
 import v60 from '../assets/v60.jpg'
 import lavender from '../assets/lavender-latte.webp'
-import tonic from '../assets/tonic-pour.jpg'
+import mocha from '../assets/mocha.jpg'
 
 export const MENU_ITEMS = [
 	{
@@ -14,7 +14,7 @@ export const MENU_ITEMS = [
 		price: 4.0,
 		size: '16oz',
 		image: v60,
-		featured: true,
+		featured: false,
 		current: true,
 	},
 	{
@@ -23,7 +23,7 @@ export const MENU_ITEMS = [
 		description: 'A smooth blend of cold-brewed espresso concentrate + milk',
 		price: 5.0,
 		size: '16oz',
-		image: icedLatte,
+		image: latte,
 		featured: false,
 		current: true,
 	},
@@ -54,8 +54,8 @@ export const MENU_ITEMS = [
 		description: 'Cold-brewed espresso concentrate + tonic water + orange peel',
 		price: 4.5,
 		size: '16oz',
-		image: tonic,
-		featured: true,
+		image: mocha,
+		featured: false,
 		current: true,
 	},
 	{
@@ -70,10 +70,23 @@ export const MENU_ITEMS = [
 	},
 	{
 		id: 6,
-		drink: 'Add-ons',
-		description: 'oatmilk, syrups',
-		price: 1.0,
-		featured: false,
+		drink: 'Pourovers',
+		description:
+			"Single origin and blended coffees brewed by hand, to order",
+		price: 4.0,
+		size: '16oz',
+		image: v60,
+		featured: true,
+		current: true,
+	},
+	{
+		id: 7,
+		drink: 'Mocha',
+		description: 'Hot, chocolatey, coffee',
+		price: 4.5,
+		size: '16oz',
+		image: mocha,
+		featured: true,
 		current: true,
 	},
 ]

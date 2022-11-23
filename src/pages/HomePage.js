@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import CoffeeInfo from '../features/coffeemap/CoffeeInfo'
 import MenuCarousel from '../features/menu/MenuCarousel'
 import ClassInfo from '../features/coffeeclasses/ClassInfo'
-import AboutContent from '../features/AboutContent'
+import owner from '../app/assets/owner.jpg'
 
 const HomePage = () => {
 	return (
@@ -39,7 +39,26 @@ const HomePage = () => {
 					<CoffeeInfo />
 					<MenuCarousel />
 					<ClassInfo />
-					<AboutContent className='my-lg-5' />
+					<Row className='mx-5 py-5 gx-5 gy-4 my-lg-5 align-items-center'>
+						<Col md='6'>
+							<img
+								src={owner}
+								className='img-fluid aboutpage-img'
+								alt='owner'
+							/>
+						</Col>
+						<Col className='aboutpage-text'>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+								sunt in culpa qui officia deserunt mollit anim id est laborum
+							</p>
+						</Col>
+					</Row>
 					<Row className='text-center pt-5 px-3 px-md-5'>
 						<Col>
 							<a href='https://pasco-farms.square.site/pasco-coffee-bar'>
