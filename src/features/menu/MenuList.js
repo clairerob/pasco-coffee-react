@@ -1,22 +1,22 @@
-import MenuItem from './MenuItem';
-import { getCurrentMenuItems } from './menuItemsSlice';
-import { Col } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import MenuItem from './MenuItem'
+import { Col } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
+import { getCurrentDrinks } from './drinksSlice'
 
 const MenuList = () => {
-	const items = useSelector(getCurrentMenuItems);
+	const drinks = useSelector(getCurrentDrinks)
 
 	return (
 		<>
-			{items.map((item) => {
+			{drinks.currentDrinks.map((drink) => {
 				return (
-					<Col sm='6' key={item.id} className='text-center'>
-						<MenuItem item={item} />
+					<Col sm='6' key={drink._id} className='text-center'>
+						<MenuItem drink={drink} />
 					</Col>
-				);
+				)
 			})}
 		</>
-	);
-};
+	)
+}
 
-export default MenuList;
+export default MenuList

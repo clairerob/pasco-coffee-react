@@ -14,12 +14,14 @@ import ScrollToTop from './components/ScrollToTop'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { fetchRoasteries } from './features/roasteries/roasteriesSlice'
+import { fetchDrinks } from './features/menu/drinksSlice'
 
 const App = () => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
 		dispatch(fetchRoasteries())
+		dispatch(fetchDrinks())
 	}, [dispatch])
 
 	return (

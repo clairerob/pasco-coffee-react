@@ -7,7 +7,6 @@ export const fetchRoasteries = createAsyncThunk(
 		const response = await sanityClient.fetch(
 			`*[_type == "roasteries"]{
                 _id,
-                _type,
                 featured,
                 link,
                 roasteryName,

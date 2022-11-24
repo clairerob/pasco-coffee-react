@@ -1,17 +1,17 @@
-import { formatCurrency } from '../../utils/formatCurrency';
+import { formatCurrency } from '../../utils/formatCurrency'
 
-const MenuItem = ({ item }) => {
-	const { drink, description, price } = item;
+const MenuItem = ({ drink }) => {
+	const { drinkName, drinkDescription, drinkPrice } = drink
 	return (
 		<>
-			<h4>{drink.toLowerCase()}</h4>
+			<h4>{drinkName.toLowerCase()}</h4>
 			<p>
-				<small>{description.toLowerCase()}</small>
+				<small>{drinkDescription.toLowerCase()}</small>
 				<br />
-				<strong>{formatCurrency(price)}</strong>
+				<strong>{formatCurrency(drinkPrice)}</strong>
 			</p>
 		</>
-	);
-};
+	)
+}
 
-export default MenuItem;
+export default MenuItem

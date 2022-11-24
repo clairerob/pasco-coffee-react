@@ -9,15 +9,6 @@ const category = {
 			type: 'string',
 		},
 		{
-			title: 'Slug',
-			name: 'slug',
-			type: 'slug',
-			options: {
-				source: 'title',
-				maxLength: 96,
-			},
-		},
-		{
 			title: 'Description',
 			name: 'description',
 			type: 'text',
@@ -28,6 +19,6 @@ const category = {
 			type: 'string',
 		},
 	],
-};
+}
 
-export default category;
+export default category

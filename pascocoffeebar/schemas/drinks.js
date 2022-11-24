@@ -9,14 +9,6 @@ const drinks = {
 			type: 'string',
 			validation: (Rule) => Rule.required(),
 		},
-		// {
-		// 	name: 'category',
-		// 	title: 'Category',
-		// 	type: 'reference',
-		// 	to: {
-		// 		type: 'category',
-		// 	},
-		// },
 		{
 			title: 'Description',
 			name: 'drinkDescription',
@@ -30,7 +22,6 @@ const drinks = {
 			title: 'Price',
 			name: 'drinkPrice',
 			type: 'number',
-			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Image',
@@ -44,7 +35,11 @@ const drinks = {
 			title: 'Current',
 			name: 'current',
 			type: 'boolean',
-			validation: (Rule) => Rule.required(),
+		},
+		{
+			title: 'Featured',
+			name: 'featured',
+			type: 'boolean',
 		},
 	],
 }
