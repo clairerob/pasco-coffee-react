@@ -8,15 +8,14 @@ const ClassCard = ({ workshop }) => {
 	const availableSlots = slots.filter((slot) => slot <= spaces)
 
 	const [places, setPlaces] = useState(1)
-	const [orderDetails, setOrderDetails] = useState({
-		name,
-		date,
-		places: 1,
-	})
 
 	const [show, setShow] = useState(false)
-	const handleClose = () => setShow(false)
+
 	const handleOpen = () => setShow(true)
+	const handleClose = () => {
+		setShow(false)
+		setPlaces(1)
+	}
 
 	const handleChange = (e) => {
 		setPlaces((sp) => e.target.value)
@@ -24,8 +23,6 @@ const ClassCard = ({ workshop }) => {
 
 	const handleSubmit = (e) => {
 		alert('places selected:' + places + name + date)
-		setOrderDetails((order) => ({ ...order, places: places }))
-		setPlaces(1)
 		e.preventDefault()
 		handleClose()
 	}
