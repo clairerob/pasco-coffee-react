@@ -8,6 +8,7 @@ import drinks from './drinks'
 import category from './category'
 import classes from './classes'
 import classType from './classType'
+import roasteries from './roasteries'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,5 +16,5 @@ export default createSchema({
 	name: 'default',
 	// Then proceed to concatenate our document type
 	// to the ones provided by any plugins that are installed
-	types: schemaTypes.concat([drinks, category, classes, classType]),
+	types: schemaTypes.concat([drinks, category, classes, classType, roasteries]),
 })

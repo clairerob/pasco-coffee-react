@@ -177,7 +177,7 @@ h2 {
 	border: 5px solid var(--light-gold-color);
 	border-radius: 15px;
 	color: var(--black);
-	padding: 10px;
+	padding: 5px 10px;
 	font-weight: 600;
 	font-size: x-large;
 }
@@ -243,7 +243,7 @@ footer {
 	border: 5px solid var(--black);
 	border-radius: 15px;
 	color: var(--off-white-color);
-	padding: 10px;
+	padding: 5px;
 	font-weight: 600;
 	font-size: x-large;
 }

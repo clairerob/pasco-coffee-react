@@ -11,7 +11,7 @@ const classType = {
 		{
 			title: 'Description',
 			name: 'description',
-			type: 'text',
+			type: 'string',
 		},
 		{
 			title: 'Image',

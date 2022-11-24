@@ -34,9 +34,6 @@ const Footer = () => {
 								<Link to='/about'>about</Link>
 							</li>
 							<li>
-								<Link to='/coffee'>coffee</Link>
-							</li>
-							<li>
 								<Link to='/coffee-map'>the coffee map</Link>
 							</li>
 							<li>
@@ -48,7 +45,7 @@ const Footer = () => {
 						</ul>
 
 						<a href='https://pasco-farms.square.site/pasco-coffee-bar'>
-							<button className='mx-auto my-3 px-5 order-btn'>
+							<button className='mx-auto my-5 px-5 order-btn'>
 								order online now
 							</button>
 						</a>
