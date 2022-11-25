@@ -4,12 +4,12 @@ import sanityClient from '../../client'
 import ImageUrlBuilder from '@sanity/image-url'
 
 const ClassCard = ({ workshop, spaces }) => {
+	const { name, date, availability, type, classTitle } = workshop
+
 	const builder = ImageUrlBuilder(sanityClient)
 	function urlFor(source) {
 		return builder.image(source)
 	}
-
-	const { name, date, availability, type, classTitle } = workshop
 
 	const availablePlaces = spaces.filter((space) => availability >= space)
 

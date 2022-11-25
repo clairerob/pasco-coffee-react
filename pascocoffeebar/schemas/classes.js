@@ -20,14 +20,6 @@ const classes = {
 			validation: (Rule) => Rule.required(),
 		},
 		{
-			title: 'Month',
-			name: 'month',
-			type: 'number',
-			options: {
-				hotspot: true,
-			},
-		},
-		{
 			title: 'Availability',
 			name: 'availability',
 			type: 'number',

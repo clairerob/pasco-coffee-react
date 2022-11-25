@@ -1,12 +1,10 @@
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import { memo } from 'react';
-import mymap from '../../app/assets/mymap.json';
-import { getCurrentCoffees } from './coffeesSlice';
-import CoffeeTooltip from './CoffeeTooltip';
-import { useSelector } from 'react-redux';
+import { ComposableMap, Geographies, Geography } from 'react-simple-maps'
+import mymap from '../../app/assets/mymap.json'
+import { getCurrentCoffeeCountries, getCurrentCoffees } from './coffeesSlice'
+import CoffeeTooltip from './CoffeeTooltip'
+import { useSelector } from 'react-redux'
 
-const geoUrl = 
-mymap;
+const geoUrl = mymap
 
 const worldStyles = {
 	default: {
@@ -24,7 +22,7 @@ const worldStyles = {
 		stroke: '#5ac',
 		outline: 'none',
 	},
-};
+}
 
 const coffeeCountryStyles = {
 	default: {
@@ -45,14 +43,11 @@ const coffeeCountryStyles = {
 		strokeWidth: 3,
 		outline: 'none',
 	},
-};
+}
 
 const CoffeeMap = ({ setTooltipContent }) => {
-    const currentCoffees = useSelector(getCurrentCoffees);
-
-    const currentCoffeeCountries = currentCoffees.reduce((acc, cur) => {
-        return [...acc, cur.country]
-    }, []);
+	const currentCoffees = useSelector(getCurrentCoffees)
+	const currentCoffeeCountries = useSelector(getCurrentCoffeeCountries)
 
 	return (
 		<div data-tip=''>
@@ -64,22 +59,26 @@ const CoffeeMap = ({ setTooltipContent }) => {
 								key={geo.rsmKey}
 								geography={geo}
 								style={
-									currentCoffeeCountries.includes(geo.properties.name)
+									currentCoffeeCountries.currentCoffeeCountries.includes(
+										geo.properties.name
+									)
 										? coffeeCountryStyles
 										: worldStyles
 								}
 								onMouseEnter={() => {
-									const coffeeFromHere = currentCoffees.filter(
-										geo.properties.name
-									);
+									const coffeeFromHere = currentCoffees.currentCoffees.filter(
+										(coffee) =>
+											coffee.country.toLowerCase() ===
+											geo.properties.name.toLowerCase()
+									)
 									setTooltipContent(
 										coffeeFromHere.length > 0 && (
 											<CoffeeTooltip coffeeFromHere={coffeeFromHere} />
 										)
-									);
+									)
 								}}
 								onMouseLeave={() => {
-									setTooltipContent('');
+									setTooltipContent('')
 								}}
 							/>
 						))
@@ -87,7 +86,7 @@ const CoffeeMap = ({ setTooltipContent }) => {
 				</Geographies>
 			</ComposableMap>
 		</div>
-	);
-};
+	)
+}
 
-export default memo(CoffeeMap);
+export default CoffeeMap

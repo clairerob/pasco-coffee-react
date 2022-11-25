@@ -8,6 +8,8 @@ import Loading from '../../components/Loading'
 
 const ClassFilterSet = () => {
 	const classes = useSelector(getAllClasses)
+	const isLoading = useSelector((state) => state.classes.isLoading)
+	const errMsg = useSelector((state) => state.classes.errMsg)
 
 	const [filterType, setFilterType] = useState(null)
 	const [filterMonth, setFilterMonth] = useState(null)
@@ -19,7 +21,6 @@ const ClassFilterSet = () => {
 		setFilterAvailability(null)
 	}
 
-	const spaces = ['1', '2', '3', '4']
 	const getMonthName = (date) => {
 		const curClassDate = new Date(date)
 		return curClassDate
@@ -29,6 +30,7 @@ const ClassFilterSet = () => {
 			.toLowerCase()
 	}
 
+	const spaces = ['1', '2', '3', '4']
 	const types = classes.reduce(
 		(acc, cur) => (acc.includes(cur.type.name) ? acc : [...acc, cur.type.name]),
 		[]
@@ -38,6 +40,22 @@ const ClassFilterSet = () => {
 		if (acc.includes(curClassMonth)) return acc
 		return [...acc, curClassMonth]
 	}, [])
+
+	if (isLoading) {
+		return (
+			<Row>
+				<Loading />
+			</Row>
+		)
+	}
+
+	if (errMsg) {
+		return (
+			<Row>
+				<Error errMsg={errMsg} />
+			</Row>
+		)
+	}
 
 	return (
 		<>

@@ -1,22 +1,34 @@
-import CoffeeMenuItem from './CoffeeMenuItem';
-import { getCurrentCoffees } from '../coffeemap/coffeesSlice';
-import { Col } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import CoffeeMenuItem from './CoffeeMenuItem'
+import { getCurrentCoffees } from '../coffeemap/coffeesSlice'
+import { Col } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
+import Error from '../../components/Error'
+import Loading from '../../components/Loading'
 
 const CoffeeMenuList = () => {
-	const items = useSelector(getCurrentCoffees);
+	const coffees = useSelector(getCurrentCoffees)
+	const isLoading = useSelector((state) => state.coffees.isLoading)
+	const errMsg = useSelector((state) => state.coffees.errMsg)
+
+	if (isLoading) {
+		return <Loading />
+	}
+
+	if (errMsg) {
+		return <Error errMsg={errMsg} />
+	}
 
 	return (
 		<>
-			{items.map((item) => {
+			{coffees.currentCoffees.map((coffee) => {
 				return (
-					<Col sm='6' key={item.id} className='text-center'>
-						<CoffeeMenuItem item={item} />
+					<Col sm='6' key={coffee._id} className='text-center'>
+						<CoffeeMenuItem coffee={coffee} />
 					</Col>
-				);
+				)
 			})}
 		</>
-	);
-};
+	)
+}
 
-export default CoffeeMenuList;
+export default CoffeeMenuList

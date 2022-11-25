@@ -8,7 +8,6 @@ export const fetchClasses = createAsyncThunk(
 			`*[_type == "classes"]{
                 _id,
                 date,
-                month,
                 availability,
 				name,
 				classTitle,

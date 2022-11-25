@@ -16,8 +16,6 @@ const RoastersList = () => {
 	const isLoading = useSelector((state) => state.roasteries.isLoading)
 	const errMsg = useSelector((state) => state.roasteries.errMsg)
 
-	console.log(roasteries)
-
 	if (isLoading) {
 		return (
 			<Row>

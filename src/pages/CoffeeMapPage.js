@@ -1,11 +1,11 @@
-import ReactTooltip from 'react-tooltip';
-import { useState } from 'react';
-import CoffeeMap from '../features/coffeemap/CoffeeMap';
-import { Container, Row, Col } from 'react-bootstrap';
-import RoasteriesList from '../features/roasteries/RoasteriesList';
+import ReactTooltip from 'react-tooltip'
+import { useState } from 'react'
+import CoffeeMap from '../features/coffeemap/CoffeeMapRedux'
+import { Container, Row, Col } from 'react-bootstrap'
+import RoasteriesList from '../features/roasteries/RoasteriesList'
 
 const CoffeeMapPage = () => {
-	const [tooltipContent, setTooltipContent] = useState('');
+	const [tooltipContent, setTooltipContent] = useState('')
 
 	return (
 		<div className='mapPage'>
@@ -59,7 +59,7 @@ const CoffeeMapPage = () => {
 				<RoasteriesList />
 			</Container>
 		</div>
-	);
-};
+	)
+}
 
-export default CoffeeMapPage;
+export default CoffeeMapPage

@@ -24,7 +24,7 @@ const MenuCarousel = () => {
 		setIndex(selectedIndex)
 	}
 
-	if (isLoading || drinks.length > 1) {
+	if (isLoading) {
 		return (
 			<Row>
 				<Loading />

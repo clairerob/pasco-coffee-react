@@ -16,6 +16,7 @@ import { useEffect } from 'react'
 import { fetchRoasteries } from './features/roasteries/roasteriesSlice'
 import { fetchDrinks } from './features/menu/drinksSlice'
 import { fetchClasses } from './features/coffeeclasses/classesSlice'
+import { fetchCoffees } from './features/coffeemap/coffeesSlice'
 
 const App = () => {
 	const dispatch = useDispatch()
@@ -24,6 +25,7 @@ const App = () => {
 		dispatch(fetchRoasteries())
 		dispatch(fetchDrinks())
 		dispatch(fetchClasses())
+		dispatch(fetchCoffees())
 	}, [dispatch])
 
 	return (

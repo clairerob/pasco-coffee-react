@@ -1,15 +1,15 @@
-const CoffeeMenuItem = ({ item }) => {
-	const { name, country, description } = item;
+const CoffeeMenuItem = ({ coffee }) => {
+	const { coffeeName, country, description } = coffee
 	return (
 		<>
-			<h5>{name.toLowerCase()}</h5>
+			<h5>{coffeeName.toLowerCase()}</h5>
 			<p>
 				{country.toLowerCase()}
 				<br />
 				<small>{description.toLowerCase()}</small>
 			</p>
 		</>
-	);
-};
+	)
+}
 
-export default CoffeeMenuItem;
+export default CoffeeMenuItem
