@@ -1,5 +1,5 @@
 import { Row, Col } from 'react-bootstrap'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { getAllClasses } from './classesSlice'
 import { useSelector } from 'react-redux'
 import ClassCard from './ClassCard'
@@ -7,6 +7,7 @@ import Error from '../../components/Error'
 import Loading from '../../components/Loading'
 
 const ClassFilterSet = () => {
+	console.log('again')
 	const classes = useSelector(getAllClasses)
 	const isLoading = useSelector((state) => state.classes.isLoading)
 	const errMsg = useSelector((state) => state.classes.errMsg)
@@ -30,16 +31,24 @@ const ClassFilterSet = () => {
 			.toLowerCase()
 	}
 
+	function getTypes(arr) {
+		return arr.reduce(
+			(acc, cur) =>
+				acc.includes(cur.type.name) ? acc : [...acc, cur.type.name],
+			[]
+		)
+	}
+	const types = useMemo(() => getTypes(classes), [classes])
+	function getMonths(arr) {
+		return arr.reduce((acc, cur) => {
+			const curClassMonth = getMonthName(cur.date)
+			if (acc.includes(curClassMonth)) return acc
+			return [...acc, curClassMonth]
+		}, [])
+	}
+	const months = useMemo(() => getMonths(classes), [classes])
+
 	const spaces = ['1', '2', '3', '4']
-	const types = classes.reduce(
-		(acc, cur) => (acc.includes(cur.type.name) ? acc : [...acc, cur.type.name]),
-		[]
-	)
-	const months = classes.reduce((acc, cur) => {
-		const curClassMonth = getMonthName(cur.date)
-		if (acc.includes(curClassMonth)) return acc
-		return [...acc, curClassMonth]
-	}, [])
 
 	if (isLoading) {
 		return (
