@@ -3,9 +3,11 @@ import { useState } from 'react'
 import { getAllClasses } from './classesSlice'
 import { useSelector } from 'react-redux'
 import ClassCard from './ClassCard'
+import Error from '../../components/Error'
+import Loading from '../../components/Loading'
 
 const ClassFilterSet = () => {
-	const workshops = useSelector(getAllClasses)
+	const classes = useSelector(getAllClasses)
 
 	const [filterType, setFilterType] = useState(null)
 	const [filterMonth, setFilterMonth] = useState(null)
@@ -17,9 +19,25 @@ const ClassFilterSet = () => {
 		setFilterAvailability(null)
 	}
 
-	const types = ['espresso', 'cupping', 'brewing', 'latte-art']
-	const months = ['november', 'december', 'january', 'february']
 	const spaces = ['1', '2', '3', '4']
+	const getMonthName = (date) => {
+		const curClassDate = new Date(date)
+		return curClassDate
+			.toLocaleString('en-US', {
+				month: 'long',
+			})
+			.toLowerCase()
+	}
+
+	const types = classes.reduce(
+		(acc, cur) => (acc.includes(cur.type.name) ? acc : [...acc, cur.type.name]),
+		[]
+	)
+	const months = classes.reduce((acc, cur) => {
+		const curClassMonth = getMonthName(cur.date)
+		if (acc.includes(curClassMonth)) return acc
+		return [...acc, curClassMonth]
+	}, [])
 
 	return (
 		<>
@@ -46,7 +64,7 @@ const ClassFilterSet = () => {
 									key={buttonLabel}
 									name={buttonLabel}
 									onClick={(e) => setFilterType(e.target.name)}
-									active={isActive}
+									active={+isActive}
 									className={isActive ? 'filter-on' : 'filter-off'}
 								>
 									{buttonLabel}
@@ -76,7 +94,7 @@ const ClassFilterSet = () => {
 									key={buttonLabel}
 									name={buttonLabel}
 									onClick={(e) => setFilterMonth(e.target.name)}
-									active={isActive}
+									active={+isActive}
 									className={isActive ? 'filter-on' : 'filter-off'}
 								>
 									{buttonLabel}
@@ -105,7 +123,7 @@ const ClassFilterSet = () => {
 									key={buttonLabel}
 									name={buttonLabel}
 									onClick={(e) => setFilterAvailability(e.target.name)}
-									active={isActive}
+									active={+isActive}
 									className={isActive ? 'filter-on' : 'filter-off'}
 								>
 									{buttonLabel}
@@ -125,21 +143,22 @@ const ClassFilterSet = () => {
 			</div>
 
 			<Row className='justify-content-center mx-xl-5 mt-2 g-5'>
-				{workshops.map((workshop) => {
-					if (filterType !== null && filterType !== workshop.name) return null
+				{classes.map((workshop) => {
+					if (filterType !== null && filterType !== workshop.type.name)
+						return null
 
 					if (
 						filterAvailability !== null &&
-						filterAvailability > workshop.spaces
+						filterAvailability > workshop.availability
 					)
 						return null
 
-					if (filterMonth !== null && filterMonth !== workshop.month)
-						return null
+					const workshopMonth = getMonthName(workshop.date)
+					if (filterMonth !== null && filterMonth !== workshopMonth) return null
 
 					return (
-						<Col key={workshop.id} xs='10' sm='6' md='4' lg='3'>
-							<ClassCard workshop={workshop} />
+						<Col key={workshop._id} xs='10' sm='6' md='4' lg='3'>
+							<ClassCard workshop={workshop} spaces={spaces} />
 						</Col>
 					)
 				})}

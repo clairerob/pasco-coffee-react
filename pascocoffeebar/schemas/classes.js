@@ -4,8 +4,13 @@ const classes = {
 	type: 'document',
 	fields: [
 		{
-			title: 'Class Name',
-			name: 'className',
+			title: 'Class Title',
+			name: 'classTitle',
+			type: 'string',
+		},
+		{
+			title: 'Name',
+			name: 'name',
 			type: 'string',
 		},
 		{

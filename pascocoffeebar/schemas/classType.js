@@ -1,8 +1,13 @@
 const classType = {
 	name: 'classType',
-	title: 'Class Type',
+	title: 'ClassType',
 	type: 'document',
 	fields: [
+		{
+			title: 'Name',
+			name: 'name',
+			type: 'string',
+		},
 		{
 			title: 'Title',
 			name: 'title',

@@ -1,25 +1,19 @@
 import sanityClient from '../../client'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-export const fetchClasses = createAsyncThunk(
-	'classes/fetchClasses',
+export const fetchClassTypes = createAsyncThunk(
+	'classTypes/fetchClassTypes',
 	async () => {
 		const response = await sanityClient.fetch(
-			`*[_type == "classes"]{
+			`*[_type == "classTypes"]{
                 _id,
-                date,
-                month,
-                availability,
+                title,
 				name,
-				classTitle,
-                type->{
-                    name,
-                    description,
-                    classImage{
-                        asset->{
+                description,
+                classImage{
+                    asset->{
                         _id,
                         url
-                        },
                     },
                 },
             }`
@@ -33,33 +27,33 @@ export const fetchClasses = createAsyncThunk(
 )
 
 const initialState = {
-	classesArray: [],
+	classTypesArray: [],
 	isLoading: true,
 	errMsg: '',
 }
 
-const classesSlice = createSlice({
-	name: 'classes',
+const classTypesSlice = createSlice({
+	name: 'classTypes',
 	initialState,
 	reducers: {},
 	extraReducers: {
-		[fetchClasses.pending]: (state) => {
+		[fetchClassTypes.pending]: (state) => {
 			state.isLoading = true
 		},
-		[fetchClasses.fulfilled]: (state, action) => {
+		[fetchClassTypes.fulfilled]: (state, action) => {
 			state.isLoading = false
 			state.errMsg = ''
-			state.classesArray = action.payload
+			state.classTypesArray = action.payload
 		},
-		[fetchClasses.rejected]: (state, action) => {
+		[fetchClassTypes.rejected]: (state, action) => {
 			state.isLoading = false
 			state.errMsg = action.error ? action.error.message : 'Fetch failed'
 		},
 	},
 })
 
-export const classesReducer = classesSlice.reducer
+export const classTypesReducer = classTypesSlice.reducer
 
-export const getAllClasses = (state) => {
-	return state.classes.classesArray
+export const getAllClassTypes = (state) => {
+	return state.classTypes.classTypesArray
 }
