@@ -7,10 +7,13 @@ import Error from '../../components/Error'
 import Loading from '../../components/Loading'
 
 const ClassFilterSet = () => {
-	console.log('again')
 	const classes = useSelector(getAllClasses)
 	const isLoading = useSelector((state) => state.classes.isLoading)
 	const errMsg = useSelector((state) => state.classes.errMsg)
+
+	const orderedClasses = classes
+		.map((item) => ({ ...item, sortDate: new Date(item.date) }))
+		.sort((classA, classB) => classA.sortDate - classB.sortDate)
 
 	const [filterType, setFilterType] = useState(null)
 	const [filterMonth, setFilterMonth] = useState(null)
@@ -39,6 +42,7 @@ const ClassFilterSet = () => {
 		)
 	}
 	const types = useMemo(() => getTypes(classes), [classes])
+
 	function getMonths(arr) {
 		return arr.reduce((acc, cur) => {
 			const curClassMonth = getMonthName(cur.date)
@@ -170,7 +174,7 @@ const ClassFilterSet = () => {
 			</div>
 
 			<Row className='justify-content-center mx-xl-5 mt-2 g-5'>
-				{classes.map((workshop) => {
+				{orderedClasses.map((workshop) => {
 					if (filterType !== null && filterType !== workshop.type.name)
 						return null
 

@@ -3,6 +3,7 @@ import mymap from '../../app/assets/mymap.json'
 import { getCurrentCoffeeCountries, getCurrentCoffees } from './coffeesSlice'
 import CoffeeTooltip from './CoffeeTooltip'
 import { useSelector } from 'react-redux'
+import { memo } from 'react'
 
 const geoUrl = mymap
 
@@ -89,4 +90,4 @@ const CoffeeMap = ({ setTooltipContent }) => {
 	)
 }
 
-export default CoffeeMap
+export default memo(CoffeeMap)

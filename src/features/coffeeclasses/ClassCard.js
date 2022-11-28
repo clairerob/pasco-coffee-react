@@ -35,7 +35,11 @@ const ClassCard = ({ workshop, spaces }) => {
 	return (
 		<>
 			<Card
-				className='coffee-class-card text-center border-light h-100'
+				className={
+					availability
+						? 'coffee-class-card text-center border-light h-100'
+						: 'text-center border-light h-100'
+				}
 				style={{ borderRadius: '20px' }}
 				onClick={availability ? handleOpen : null}
 			>
@@ -53,7 +57,7 @@ const ClassCard = ({ workshop, spaces }) => {
 							textShadow: '2px 2px 3px black',
 						}}
 					>
-						<h2>{type.name}</h2>
+						<h2>{classTitle.toLowerCase()}</h2>
 					</Card.Title>
 				</Card.ImgOverlay>
 				<Card.Body>

@@ -50,8 +50,8 @@ h2 {
 
 .app {
 	background-image: linear-gradient(
-			rgba(255, 255, 255, 0.5),
-			rgba(255, 255, 255, 0.5)
+			rgba(255, 255, 255, 0.6),
+			rgba(255, 255, 255, 0.6)
 		),
 		url(./app/assets/dddraw.svg);
 	margin: 0;
@@ -184,10 +184,6 @@ h2 {
 
 .aboutpage-btn:hover {
 	background: transparent;
-}
-
-.aboutpage-container {
-	color: var(--dark-green-text-color);
 }
 
 .contact-page-location-link {
